@@ -41,7 +41,7 @@ $Q_1=Q$，就是证明了两个效率相等.\\
 轮，可知$q_1-q$的值必是正的，即\\
 \centerline{$q_1>q$;}
 又因
-\centerline{$Q_1=Q$}（而且都是正数），
+\centerline{$Q_1=Q \text{（而且都是正数）}，}
 就得 
 \centerline{$\frac{q_1}{Q_1}>\frac{q}{Q}$，}
 或
