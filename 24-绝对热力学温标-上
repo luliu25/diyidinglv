@@ -16,48 +16,60 @@
 \catcode `\@=11
 \def\uwavealt{\bgroup \markoverwith{\lower5.5\p@\hbox{\sixly \char58}}\ULon}
 
+\newcommand{\dbar}{d\hspace*{-0.08em}\bar{}\hspace*{0.1em}} % 用于 "\dbar"
+
+\usepackage[version=4]{mhchem} % 用于化学式;
+
+\usepackage{tikz}
+\newcommand\parallelogram{
+   \mathord{\text{
+      \tikz[baseline]
+         \draw (0em, .1ex) -- ++( .9em, 0ex) --
+            ++(.2em, 1.2ex) -- ++(-0.9em, 0ex) -- cycle;}}}
+% 用于平行四边形符号;
+
 \begin{document}
 
 \setcounter{section}{23}
 \setcounter{page}{68}
 
 \section{绝对热力学温标} 
-\qquad 说起来好象有些奇怪，我们到现在为止还没有认真地给温度
+说起来好象有些奇怪，我们到现在为止还没有认真地给温度
 下过一个定义．在第一章里我们引进温度，只是作为规定热力学
 系统的状态的变数之一．在热力学第一定律里，根本用不到温度
 这个概念．在热力学第二定律里，温度这个概念确是很重要，但到
-现在为止，我们只用到\uwavealt{较高}温度和\uwavealt{较低}湿度这类说法．为了区别
+现在为止，我们只用到\uwavealt{较高}温度和\uwavealt{较低}温度这类说法．为了区别
 两个物体的温度高低，只需把它们互相接触，看看热量从哪一个物
 体传到另一个物体，则知失热的物体温度较高，得热的物体温度
 较低．\\
 \indent 我们知道，用液体温度计所规定的温标有许多缺点，其中最重
 要的是，由于所选作为温度计用的物质（叫做测温物质）的性质不
 同，所定的温标除在冰点和汽点相同外，其它温度往往有显著的差
-异．例如在一个依水银温度计指示为50℃的温度，用$CS_2$温度
+异．例如在一个依水银温度计指示为50℃的温度，用\ce{CS2}温度 % 化学式用 \ce{}; "ce" 代表 chemical equation.
 计测量，将是49.5℃.\\
 \indent 为了避免这些差异，提高温度测量的精确度，人们选用了气体
 温度计所规定的所谓理想气体温标作为标准，其它温度计必须经
 气体温度计校正之后才能得到可靠的温度．在理想气体温标中，
-根据玻意耳一马略特定律，在体积保持不变的条件下，气体压强的
+根据玻意耳--马略特定律，在体积保持不变的条件下，气体压强的
 改变作为温度的量度，或在压强保持不变的条件下，气体体积的改
 变作为温度的量度．实验证明，用不同的定体或定压气体温度计
 所测定的温度都是一样的，这就是说，理想气体的温标是与用作
 测温物质的气体之为氢或氮无关的．用水银温度计建立的所谓
-盖•吕萨克一查里定律的真正意义，只是实验证明了水银温度计所
-测的温度又与气体泥度计所测的相同．当然，这个相同只是近似
+盖•吕萨克--查里定律的真正意义，只是实验证明了水银温度计所
+测的温度又与气体温度计所测的相同．当然，这个相同只是近似
 的而已．\\
-\indent 以上结果都是根据玻意耳一马略特定律推导出来的．在实验
-的精确度提高以后，发现玻意耳一马略特定律并不完全正确．实际
-上，各种气体的性质都或多或少地与玻意耳一马略特定律有些差
+\indent 以上结果都是根据玻意耳--马略特定律推导出来的．在实验
+的精确度提高以后，发现玻意耳--马略特定律并不完全正确．实际
+上，各种气体的性质都或多或少地与玻意耳--马略特定律有些差
 别．因此，从各种气体温度计测得的温度，加以适当的改正，才得
 理想气体温标的温度．又在极高和极低的温度区域，气体温度计
 将失去它的作用．\\
-\indent 我们可以根据卡诺定理来规定一种叫做绝对热力学温标．它
+\indent 我们可以根据卡诺定理来规定一种叫做\textbf{\heiti 绝对热力学温标}．它
 与工作物质的性质无关，它只依赖于热量和机械工作的测定，而且
-它又将被证明与理想气体温标完全相同．\\
-\subsection{(a) 绝对热力学温标的定义}
+它又将被证明与理想气体温标完全相同．
+\subsection{绝对热力学温标的定义}
 \indent 根据卡诺定理，工作于两个一定温度之间的可逆热机的效率，
-只能与这两个温度有关，而与工作吻质的性质及所吸收的热量和
+只能与这两个温度有关，而与工作物质的性质及所吸收的热量和
 做出的工作的多少无关，应当是这两个温度的一个普适函数．设
 $t$和$t'（t>t'）$为在任意选定的温标中用来标志这个热机的两个热
 源的温度，则\\
@@ -66,7 +78,7 @@ $t$和$t'（t>t'）$为在任意选定的温标中用来标志这个热机的两
 \centerline{$\dfrac{Q}{q}=f(t,t')$,}
 式中$f(t,t')$为$t$和$t'$的普适函数，普遍适用于所有的可逆
 热机，$t$也就是热机所吸收的热量$Q$的温度，$t'$也就是热机所放弃
-的热量$q$的温度$t_0$\\
+的热量$q$的温度．\\
 \indent 我们还可以进一步证明这个两变数的函数$f(t,t')$具有下列的
 形式\\
 \centerline{$f(t,t')=\dfrac{\varphi (t)}{\varphi (t')}=\dfrac{Q}{q}$.}
@@ -87,12 +99,12 @@ $t'$所吸收的热量恰等于第一个热机在热源$t'$所放出的热量，
 与式（A）比较，就得\\
 \centerline{$f(t,t')=\dfrac{f(t,t_0)}{f(t',t_0)}$,}
 这就是普适函数$f$所必须满足的函数方程．\\
-\indent 由于$t_0$是一个任意固定的温度，它即不出现于是（D）的右方，
-就一定要在式（D）的右上方上面分子和下面分母中互相消去．于是
+\indent 由于$t_0$是一个任意固定的温度，它既不出现于式（D）的右方，
+就一定要在式（D）的右方上面分子和下面分母中互相消去．于是
 式（D）可以写成\\
 \centerline{$\dfrac{Q}{q}=f(t,t')=\dfrac{\varphi (t)}{\varphi (t')}$.}
 这就是我们所要证明的．在这个函数$\varphi$上，任意乘上一个常数因
-子，自然没有关系，所以函数$\varphi$有尚未完全确定的，也就只是一个
+子，自然没有关系；所以函数$\varphi$有尚未完全确定的，也就只是一个
 常数因子而已．\\
 \indent 函数$\varphi$为另一普适函数．这个函数的形式与经验温标$t$的选
  择有关，但与热机工作物质的性质以及$Q$和$q$的大小无关．因此，
@@ -112,8 +124,8 @@ $t'$所吸收的热量恰等于第一个热机在热源$t'$所放出的热量，
 因为可逆变化是实际上不能实现的缘故．我们根本不可能制造一
 个完善的、可逆的热机，并测出它所吸收的热量与所放出的热量之
 比．所以必须设想一个可逆循环，并从实验测得的数据来\uwavealt{计算}绝
-对温度．\\ 
-\subsection{(b）利用流体性质表出绝对温度}
+对温度．
+\subsection{利用流体性质表出绝对温度}
 \indent 任意选定了一种温度计，何如水银温度计，为测量温度之用，
 $t$就是这种温度计所指示的湿度．我们曾用这个温度计来研究过
 某流体的性质，特别是它的状态方程和热量系数．现在我们又用
@@ -125,19 +137,19 @@ $t$就是这种温度计所指示的湿度．我们曾用这个温度计来研�
 这个函数．\\
 \indent 在无穷临近的两个温度$t$和$t+dt$之间，使该流体经历一
 个无穷小的卡诺循环$ABCD$，如图12所示．与这两个温度相应的绝对
-温度为$T$和$T+dT$．图中A点的坐标为$(v,p)，B点的坐标为$(v+dv,p+dp)$．
+温度为$T$和$T+dT$．图中A点的坐标为$(v,p)$，B点的坐标为$(v+dv,p+dp)$．
 从状态A起，等温地变到状态B时，由于温度不变的缘故，流体从温源所吸收的
 无穷小热量为\\
 \centerline{$\dbar Q=l dv$.}
-\indent 再求在这个循环中流体所做出的工作就是$ABCD$所包围的
+\indent 再求在这个循环中流体所做出的工作，就是$ABCD$所包围的
 面积．$ABCD$可近似地作为一个平行四边形看待．由图可知\\
-\centerline{$ABCD=2ABD=2ABF=AF\times AF$,}
+\centerline{$\parallelogram ABCD=2 \triangle ABD=2 \triangle ABF=AF\times AF$,}
 但\\
-\centerline{$AE=dv$, $AF=(\dfrac{\partial p}{\partial t)_v dt$,}
+\centerline{$AE=dv$, $AF=(\dfrac{\partial p}{\partial t})_v dt$,} % 你之前少输入了一个右括号 "}"
 所以流体所做出的工作为\\
-\centerline{$\partial W=(\dfrac{\partial p}{\partial t)_v dvdt$,}
+\centerline{$\partial W=(\dfrac{\partial p}{\partial t})_v dvdt$,} % 少输入了一个右括号 "}"
 于是这个卡诺循环的效率为\\
-\centerline{$\eta =\dfrac{\dbar W}{J\dbar Q}=\dfrac{1}{Jl}(\dfrac{\partial p}{\partial t)_v dt$;}
+\centerline{$\eta =\dfrac{\dbar W}{J\dbar Q}=\dfrac{1}{Jl}(\dfrac{\partial p}{\partial t})_v dt$;} % 少输入了一个右括号 "}"
 可见这个效率为无穷小，这是理所当然的，因为这个循环工作于两
 个无穷邻近的温度之间的缘故．\\
 \indent 从另一方面来说，根据绝对温度的定义\\
@@ -146,35 +158,36 @@ $t$就是这种温度计所指示的湿度．我们曾用这个温度计来研�
 卡诺循环的效率又为\\
 \centerline{$\eta =1-\dfrac{\dbar q}{\dbar Q}=1-\dfrac{T}{T+dT}=\dfrac{dT}{T}$.}
 把$\eta$的这两式相等，即有\\
-\centerline{$\dfrac{dT}{T}=\dfrac{1}{Jl}(\dfrac{\partial p}{\partial t)_v dt$,}
+\centerline{$\dfrac{dT}{T}=\dfrac{1}{Jl}(\dfrac{\partial p}{\partial t})_v dt$,} % 少输入了一个右括号 "}"
 再积分得\\
-\centerline{$T=T_0 e^{\int_{t_0}^t \dfrac{1}{Jl}(\dfrac{\partial p}{\partial t)_v dt}$}
+\centerline{$T=T_0 e^{\int_{t_0}^t \dfrac{1}{Jl}(\dfrac{\partial p}{\partial t})_v dt}$} % 少输入了一个右括号 "}"
 式中$e$为自然对数的底；$T_0$为一个任意常数，用来表示与$t_0$相对
 应的绝对温度．\\
 \indent 如果我们对于所研究的流体，已十分明了其力学的和热学的
 性质，则于体积不变时，$p$和$l$都是$t$的函数；把这些函数代入
-$(\dfrac{\partial p}{\partial t)_v$可从流体的状态方程求出，$l$可由$C_p$和$C_v$等表出[见第
-二章第12节式（8）] ．\\
-\subsection{(c) 绝对温度与理想气体温度计所指示的温度之间的关系}
+$(\dfrac{\partial p}{\partial t})_v$可从流体的状态方程求出，$l$可由$C_p$和$C_v$等表出[见第 % 少输入了一个右括号 "}"
+二章第12节式（8）] ．
+\subsection{绝对温度与理想气体温度计所指示的温度之间的关系}
 \indent 试取一定体积的气体，作为一个\uwavealt{定体气体温度计}，用这个温度
 计来规定温度$t$，进一步求出$t$和$T$之间的关系．\\
 \indent 另取同一气体作为本节(b)中所述的流体来研究它．\\
-\indent 第一，在$t$的\uwavealt{定义}中．我们默认了气体的压强$p$为其温度$t$的
+\indent 第一，在$t$的\uwavealt{定义}中，我们默认了气体的压强$p$为其温度$t$的
 线性函数．在采取了理想气体温标之后，这个结果既不是从一个
 实验得来，也不是从一个盖・吕萨克定律推出，实在是早已包含在
 我们所采取的理想气体温标的定义之中了．不是我们以气体压强
 的增量（在体积不变的条件下）为其温度上升的量度吗？\\
 \indent 所以，在体积不变的条件下，我们有：\\
-\centerline{$p=p_0(1+at)$  \text{和}  $(\dfrac{\partial p}{\partial t)_v=ap_0$.}
+\centerline{$p=p_0(1+at)$  \text{和}  $(\dfrac{\partial p}{\partial t})_v= \alpha p_0$.} % 少输入了一个右括号 "}"
 \indent 第二，所谓理想气体，完全遵循焦耳定律，因而其内能只是温
 度的函数，而有（见第二章第16节）：\\
 \centerline{$l=\dfrac{p}{J}$.}
-把$l$和$(\dfrac{\partial p}{\partial t)_v$的值代入上面$T$积分中，得\\
-\centerline{$\int_{t_0}^t \dfrac{1}{Jl}(\dfrac{\partial p}{\partial t)_v dt=\int_{t_0}^t \dfrac{ap_0}{p}dt=\int_{t_0}^t \dfrac{dt}{\dfrac{1}{a}+t}=In\dfrac{\dfrac{1}{a}+t}{\dfrac{1}{a}+t_0}$;}
+把$l$和$(\dfrac{\partial p}{\partial t})_v$的值代入上面$T$积分中，得\\ % 少输入了一个右括号 "}"
+\centerline{$\int_{t_0}^t \dfrac{1}{Jl}(\dfrac{\partial p}{\partial t})_v dt=\int_{t_0}^t \dfrac{ap_0}{p}dt=\int_{t_0}^t \dfrac{dt}{\dfrac{1}{a}+t}=In\dfrac{\dfrac{1}{a}+t}{\dfrac{1}{a}+t_0}$;}
+% 是 \alpha, 不是 a.
 于是我们有\\
-\centerline{$T=\dfrac{T_0}{\dfrac{1}{a}+t_0}(\dfrac{1}{a}+t)$.}
+\centerline{$T=\dfrac{T_0}{\dfrac{1}{\alpha}+t_0}(\dfrac{1}{\alpha}+t)$.}
 取\\
-\centerline{$T_0=\dfrac{1}{a}+t_0}$,}
+\centerline{$T_0=\dfrac{1}{\alpha}+t_0$,}
 即得\\
 
 \end{document} 
