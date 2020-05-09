@@ -1,0 +1,85 @@
+\documentclass{ctexbook}
+\usepackage{ctex,amsmath}
+\usepackage[papersize={13.56cm},lmargin=1.5cm,rmargin=1.5cm]{geometry}
+\newcommand{\dbar}{d\hspace*{0.1em}}
+
+\renewcommand\thesection{\arabic{section}.}
+\renewcommand\thesubsection{(\alph{subsection})}
+%
+\usepackage{titlesec}
+\titleformat{\section}{\large\centering}{\thesection}{8pt}{}
+\titleformat{\subsection}{\normalsize\heiti\bfseries}{\qquad\thesubsection}{6pt}{}
+%
+\titlespacing{\section}{0pt}{5pt}{0pt}
+\titlespacing{\subsection}{0pt}{0pt}{0pt}
+
+\catcode `\@=11
+\def\uwavealt{\bgroup \markoverwith{\lower5.5\p@\hbox{\sixly \char58}}\ULon}
+
+\begin{document}
+catcode `\@=11
+\def\uwavealt{\bgroup \markoverwith{\lower5.5\p@\hbox{\sixly \char58}}\ULon}
+
+\newcommand{\dbar}{d\hspace*{-0.08em}\bar{}\hspace*{0.1em}} % 用于 "\dbar"
+
+\usepackage[version=4]{mhchem} % 用于化学式;
+
+\usepackage{tikz}
+\newcommand\parallelogram{
+   \mathord{\text{
+      \tikz[baseline]
+         \draw (0em, .1ex) -- ++( .9em, 0ex) --
+            ++(.2em, 1.2ex) -- ++(-0.9em, 0ex) -- cycle;}}}
+% 用于平行四边形符号;
+
+\begin{document}
+
+\setcounter{section}{23}
+\setcounter{page}{68}
+\section{用绝对温度表达卡诺定理―克劳修斯不等式} 
+在以前几节中，用$Q$代表温源所供给的热量，用$q$代表冷源所
+吸收的热量．前者以供给为正，后者以吸收为正，$Q$和$q$都成正
+量，在实际上固然方便了，但在形式上，符号有成为不对称的毛病．
+为便于将来推广起见，现再改回对称符号．而命$Q＝-q$．\\
+\indent 设有两个热源，其绝对温度为$T$和$T'$(并不指定孰大孰小)．
+当系统经历一\uwavealt{闭合}变化时，$Q$和$Q'$代表这两个热源所供给于系
+统的热量．\\ 
+\indent (1) \textbf{\fangsong 可逆变化}  从绝对温度的定义\dfrac{Q}{T}=\dfrac{q}{T'}，即得\\
+\centerline{$ \dfrac{Q}{T}+\dfrac{Q'}{T'}=0$.}
+\indent 这个式子的正确性与$T$和$T'$之孰大孰小无关，也与循环进
+行之沿正向或沿逆向无关．这是双源可逆变化的普遍结果．\\
+\indent (1) \textbf{\fangsong 不可逆变化}  在不可循环中，我们将可证明\\
+\centerline{$\dfrac{Q}{T}+\dfrac{Q'}{T'}<0$.}
+证明的方法与在第23节（b）中所用的相同，惟于$Q$和$Q'$这两个
+热量不必再作正负的假定．\\
+\设$C$为一个不可逆循环，从热源$T$和$T'$分别吸收热量$Q$和
+$Q'$．另任取一流体，并使它作为一可逆循环$C_1$，也从这两个热源吸
+收热量$Q_1$和$Q'_1$．我们常能选择$Q_1=-Q$，从而有\\
+\centerline{$\dfrac{Q_1}{T}+\dfrac{Q'_1}{T'}=-\dfrac{Q}{T}+\dfrac{Q'_1}{T'}$.}
+\indent 若把$C$和$C_1$这两个循环联合进行，就成一个不可逆的闭合
+变化，且为\uwavealt{单热源变化}，因为热源$T$所供给的总热量$Q+Q_1=0$，
+事实上等于虚设．单有热源$T'$供给了热量，其值为$Q'+Q'_1$．根
+据第20节中关于单热源不可逆闭合变化的结论，此值应该是负
+的，即\\
+\centerline{$Q'+Q'_1<0$.}
+又因绝对温度常为正数，用$T'$除就得\\
+\centerline{$\dfrac{Q'}{T'}+\dfrac{Q'_1}{T'}<0$.}
+把它代入，我们最后得\\
+\centerline{$\dfrac{Q}{T}+\dfrac{Q'}{T'}<0$,}
+这就是我们所要证明的，称为\textbf{\heiti 克劳修斯不等式}．\\
+\indent 总而言之，当一系统经历一闭合变化，只能从两个热源吸收热
+量时，则\\
+\centerline{$\dfrac{Q}{T}-\dfrac{Q'}{T'} \ge 0$.}
+这个和不能为正，在可逆变化中为零，在不可逆变化中为负．\\
+\indent 在此尤须注意的，$T$和$T'$是\uwavealt{两个热源}的温度，而不是系统的
+温度，在不可逆变化中，系统内各部分的温度可不相同的，根本上没
+有系统的温度可言．但在可逆变化中，交换热量的两个物体的温
+度之差必须是无穷小的；在此时，也只有在此时，可认为$T$和$T'$是
+系统中与这两个热源交换热量时互相接触的某些部分的温度．\\
+\indent 实质上，式（27）只是卡诺定理的数学表述．卡诺定理说明热
+量变成机械工作的可转化性；克劳修斯不等式说明系统经历热
+状态变化所遵循的规律．把卡诺定理写成式（27），就把人们的
+着眼点从热量变成机械工作的可转化性，转移到工作物质所经
+历的热状态变化的规律性这一问题上来，为以后熵的引进做好准
+备．\\
+\end{document}
