@@ -1,0 +1,109 @@
+\documentclass{ctexbook}
+\usepackage{ctex,amsmath}
+\usepackage[papersize={13.56cm},lmargin=1.5cm,rmargin=1.5cm]{geometry}
+\newcommand{\dbar}{d\hspace*{0.1em}}
+\renewcommand\thesection{\arabic{section}.}
+\renewcommand\thesubsection{(\alph{subsection})}
+%
+\usepackage{titlesec}
+\titleformat{\section}{\large\centering}{\thesection}{8pt}{}
+\titleformat{\subsection}{\normalsize\heiti\bfseries}{\qquad\thesubsection}{6pt}{}
+%
+\titlespacing{\section}{0pt}{5pt}{0pt}
+\titlespacing{\subsection}{0pt}{0pt}{0pt}
+\catcode `\@=11
+\def\uwavealt{\bgroup \markoverwith{\lower5.5\p@\hbox{\sixly \char58}}\ULon}
+@@ -29,15 +26,13 @@ catcode `\@=11
+
+\newcommand\parallelogram{
+   \mathord{\text{
+      \tikz[baseline]
+         \draw (0em, .1ex) -- ++( .9em, 0ex) --
+            ++(.2em, 1.2ex) -- ++(-0.9em, 0ex) -- cycle;}}}
+% 用于平行四边形符号;
+
+\usepackage[version=4]{mhchem} %用于化学符号
+
+\begin{document}
+\setcounter{section}{27} 
+\setcounter{page}{85}
+\subsection{熵的计算举例}
+ (1)  {\fangsong 没有摩擦的机械系统}  这种系统不与外界交换热量，它
+的熵为常数；这是不与外界交换热量的系统在可逆变化中应有的
+结果．\\ 
+\indent  (2） {\fangsong 热传导}   设有热量$\dbar Q$从温度为$T_1$的物体$A$传导到温 
+度为$T_2$的物体$B(T_2<T_1)$．通常这两个物体的温度之差$T_1-
+T_2$不是无穷小．它们之间的热传导是一个不可逆过程．为了计
+算物体$A$和$B$所成系统在这个传热前和后的熵的改变$\Delta$，我们
+必须想象一个\uwavealt{可逆方式}才行．为此，不令$A$和$B$直接接触，而于它
+们之间接入无数个中间物体$C_1,C_2,…C_{\infty}$;这些中间物体一个接
+着一个互相接触，$C_1$与$A$接触，$C_{\infty}$与$B$接触，$C_1$的温度比$T_1$低
+一个无穷小，$C_{\infty}$的温度比$T_2$高一个无穷小，其它中间物体的温
+度又依次一个比一个低一个无穷小．热量$\dbar Q$这样从$A$经过$C_1，
+C_2,…C_{\infty}$传到$B$，就成为一个可逆过程．在这个可逆过程中，我
+们可以计算熵的改变．设中间物体$C_i$的温度为$T_i$，则它的熵的
+改变显然为$\dfrac{\dbar Q}{T_i+ \Delta T}-\dfrac{\dbar Q}{T_i}=0$.可见所有中间物体的熵在传热
+前后都没有改变．结果只有$A$的熵减少了$\dfrac{\dbar Q}{T_1}$，$B$的熵增加了
+$\dfrac{\dbar Q}{T_2}$所以$A$和$B$所成系统的熵，在传热后比在传热前增加了\\
+\centerline{$\Delta S=\dbar Q(\dfrac{1}{T_2}-\dfrac{1}{T_1})$.}
+这是不与外界交换热量的系统在不可逆变化中应有的结果．\\ 
+\indent （3）{\fangsong  不能压缩不会热胀的流体}  这种流体的唯一变数是温
+度．设$C$为它的热容量，并假定$C$为常数．若用\uwavealt{可逆方式}使该流
+体由温度$T_0$变到$T$，应该与无数个热源先后接触，每个热源供给
+无穷小的热量\\
+\centerline{$\dbar Q_\text{可逆}=CdT$.}
+于是\\
+\centerline{$\int_{T_0}^{T} \dfrac{\dbar Q_\text{可逆}}{T}=C \int_{T_0}^{T} \dfrac{dT}{T}=C In\dfrac{T}{T_0}$,}
+而该流体的熵为\\
+\centerline{$S=C InT+ \text{常数}$.}
+\indent （4）{\fangsong 气体自由膨胀}  假设气体是理想气体，在由体积$v_1$到
+$v_2$的自由膨胀中，气体的温度前后相同．自由膨胀是一个不可逆
+的过程．为了求出在膨胀前,后气体的熵的增加值，必须想象一个
+联合初、终状态的可逆过程，并沿这个可逆过程来计算$\int \dfrac{\dbar Q_\text{可逆}}{T}$的
+值．在这里，气体的初、终状态的温度既然相同，我们所能想象的
+最方便的可逆过程莫过于等温变化．于是我们有\\
+\centerline{$\int \dfrac{\dbar Q_\text{可逆}}{T}=\dfrac{1}{T} \dbar Q_\text{可逆}=\dfrac{Q_\text{可逆}}{T}=\dfrac{W_\text{可逆}}{JT}$,}
+式中$W_\text{可逆}$为气体在等温膨胀中所做出的工作，因为理想气体的内
+能（只是温度的函数）没有改变的缘故．\\ 
+\indent 最后，我们得\\
+\centerline{$S_2-S_1=\dfrac{W_\text{可逆}}{JT}=\dfrac{1}{JT} \int_{v_1}^{v_2}pdv=\dfrac{\dfrac{m}{M}R}{J} In\dfrac{v_2}{v_1}$,}
+其中利用了$pv=\dfrac{m}{M} RT$.\\
+\indent （5）{\fangsong 理想气体}   这是具有两个独立变数的系统，可取$p$和$v$
+为独立变数．其状态方程为\\
+\centerline{$pv=\dfrac{m}{M} RT$.}
+\indent 根据第二章中的式（7'），以$dp$和$dv$表出关于\uwavealt{可逆变化}的
+$\dbar Q_\text{可逆}$的值，将其中的偏微商$(\dfrac{\partial v}{\partial t})_p$和$(\dfrac{\partial v}{\partial t})_v$各从状态方程求出
+而代入，则得\\
+\centerline{$\dbar Q_\text{可逆}=\dfrac{C_p}{\dfrac{m}{M} R} pdv+\dfrac{C_v}{\dfrac{m}{M} R} v dp$}
+(容易验明$\dbar Q_\text{可逆}$不是全微分）．
+\indent 于是有\\
+\centerline{$dS=\dfrac{\dbar Q_\text{可逆}}{T}=\dfrac{C_p}{\dfrac{m}{M} RT}pdv+\dfrac{C_v}{\dfrac{m}{M} RT}dvp$.}
+以$pv$代$\dfrac{m}{M}RT，则成\\
+\centerline{$dS=C_p \dfrac{dv}{v}+C_v\dfrac{dp}{p}$.}
+这是一个全微分．把它积分得\\
+\centerline{$S=C_p Inv+C_vInp+ \text{常数}$}
+或\\
+\centerline{$S=C_v In(pv^{\gamma})+ \text{常数}$.}
+\indent 我们早可知道$S$必成\\
+\centerline{$S=f(pv^{\gamma})$}
+的形式，因为沿一绝热变化，熵的值应该是不变的缘故．\\ 
+\indent 应用状态方程也可以$T$和$v$或以$T$和$p$表出$S$的函数，结
+果是\\
+\centerline{$S=C_v In(T v^{\gamma-1})+\text{常数}=C_v InT+\dfrac{R}{J}In v+\text{常数}$,}
+和\\
+\centerline{$S=C_p In(T p^{\gamma-1})+\text{常数}=C_p InT+\dfrac{R}{J}In p+\text{常数}$,}
+\subsection{温度和熵作为一对变数}
+\indent 熵是一个态函数，也就与$p$、$v$和$T$一样，可以作为规定系统
+状态的一个变数．正如状态方程$f(p,v,T)=0$可把$T$表示成为
+其它两个变数$p$和$v$的函数（在理想气体，$T=\dfrac{pv}{\dfrac{m}{M}R}$）一样，式
+（32）$S=C_vIn(pv^{\gamma})$也对理想气体把$S$表示成为$p$和$v$的函数了．
+当然，理想气体的独立变数还是只要两个．\\
+\indent 作为能量，要用\uwavealt{一对}变数来表示．如能量之表示为机械工作
+的，我们有\\
+\centerline{$\dbar W_\text{可逆}=pdb$.}
+与此类似，能量之表现为热量的，则有\\
+\centerline{$\dbar Q_\text{可逆}=TdS$.}
+所以$T$和$S$之成为一对变数，正如$p$和$v$之成为一对变数一样．\\
+\indent $\dbar W_\text{可逆}$不是全微分和$\dbar Q_\text{可逆}$不是去微分是一样，$\dfrac{\dbar Q_\text{可逆}}{T}=dS$
+是一个全微分，又和$\dfrac{\dbar W_\text{可逆}}{p}=dv$是一个区微分一样．\\
+\end{document}
