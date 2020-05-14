@@ -1,0 +1,123 @@
+\documentclass{ctexbook}
+\usepackage{ctex,amsmath}
+\usepackage[papersize={13.56cm},lmargin=1.5cm,rmargin=1.5cm]{geometry}
+\newcommand{\dbar}{d\hspace*{0.1em}}
+\renewcommand\thesection{\arabic{section}.}
+\renewcommand\thesubsection{(\alph{subsection})}
+%
+\usepackage{titlesec}
+\titleformat{\section}{\large\centering}{\thesection}{8pt}{}
+\titleformat{\subsection}{\normalsize\heiti\bfseries}{\qquad\thesubsection}{6pt}{}
+%
+\titlespacing{\section}{0pt}{5pt}{0pt}
+\titlespacing{\subsection}{0pt}{0pt}{0pt}
+\catcode `\@=11
+\def\uwavealt{\bgroup \markoverwith{\lower5.5\p@\hbox{\sixly \char58}}\ULon}
+@@ -29,15 +26,13 @@ catcode `\@=11
+\newcommand\parallelogram{
+   \mathord{\text{
+      \tikz[baseline]
+         \draw (0em, .1ex) -- ++( .9em, 0ex) --
+            ++(.2em, 1.2ex) -- ++(-0.9em, 0ex) -- cycle;}}}
+% 用于平行四边形符号;
+\begin{document}
+\setcounter{section}{25}
+\setcounter{page}{95}
+\chapter{可用能}
+\section{可用能的定义}
+\indent 我们日常所见的大多数变化中，系统只与围绕其四周的媒质
+交换热置，而四周媒质的温度又是很少改变．因此，这些变化可以
+近似地认为单与一个热源交换热量．例如一切生物的日常变化，
+一切‘冷’的机械加工，以及多数无需特意加热而能发生的化学反
+应，都属于这一类．就是两种物质需要一个火花以开始其化合作
+用的，还是可以认作是单热源变化，因为一个火花作用的时间极
+短，供给的能量很小，可以忽略不计的缘故．又如蒸汽机，其中工
+作物质所经历的虽非单热源变化，但若把锅炉、燃料以及氧气都作
+为系统内的一部分，则该系统成为一个“化学原动机”，单与其四周
+交换热量，未始不可看作为一个单热源变化看待．\\
+\indent 可用能的概念，就是由于考虑这类单与温度均匀的四周交换
+热量的\uwavealt{不闭合}变化而引起的．在这里应该特别注意“不闭合”这三 
+个字．在这种不闭合的单热源变化中， 系统不是不能产生正的工
+作的．热力学第二原理只是告诉我们，在\uwavealt{闭合}的单热源变化中，系
+统不能产生正的工作．\\
+\indent 就实用观点而言，此处交换所得的热量是不费分文的，又交换
+的方向也可有来有往．如让冰在空气中熔化，则四周空气供给热
+置于正在变化中的系统$(Q>0)$，又如让热水在空气中冷却，则正
+在变化中的系统供给热量于四周的空气$(Q<0)$;这两个动作能够
+\uwavealt{自发}进行，丝毫不费我们的事．\\
+\indent （1）{\fangsong 可逆变化}  命$\Theta$为围绕系统四周的媒质的温度．设系统
+从状态（0）变化到状态（1）；设$Q$为系统所吸收的热量，$W$为系统
+所产生的工作；又设这个变化为可逆的．\\
+\indent 该系统的熵从$S_0$变为$S_1$．\\
+\indent 该系统的熵从$U_0$变为$U_1$．\\
+\indent 在这种不闭合的可逆的单热源变化中，从第三章20节$b$的
+讨论，我们已经知道，$W$和$Q$仅依初、终两态而决定．现在让我们
+进一步求出$W$和$Q$的值．\\
+\indent 由于变化是可逆的，根据热力学第二律我们有\\
+\centerline{$S_1-S_0=\dfrac{Q}{\Theta}$;}
+又从第一定律有\\
+\centerline{$U_1-U_0=JQ-W$.}
+\indent 根据这两个式子，我们可用$S$的变化来表出$Q$，用$S$和$U$的变
+化来表出$W$．在这里，热量$Q$既从四周得来，毫不费事，我们也就
+暂不管它；首先要注意的当然是工作$W$，结果是\\
+\centerline{$W=(J \Theta S_1-U_1)-(J\Theta S_0-U_0)$.}
+\indent 命\\
+\centerline{$F=U-J \Theta S$,}
+则$F$也为系统的一个态函数．\\
+\centerline{$F_0=U_0-J\Theta S_0 $}\text{为$F$在状态（0）的值}；\\
+\centerline{$F_1=U_1-J\Theta S_1 $}\text{为$F$在状态（1）的值}；\\
+\indent 于是从上式，得\\
+\centerline{$W=F_0-F_1$.}
+\indent 可见系统从状态（0）由可逆变化变到状态（1）时，所产生的机
+械工作等于这个$F$函数的值的减小．\\
+\indent （2）{\fangsong 不可逆变化}  上面讨论的是可逆变化．现在假设变化是
+不可逆的，从状态（0）变到状态（1）时，系统所吸收的热量为$Q$,所
+产生的工作为$W$．\\
+\indent 上面式（B）依然成立，而式（A）则须代以不等式【第27节式
+（31）】，有\\
+\centerline{$\dfrac{Q}{\Theta}<S_1-S_0$,}
+和\\
+\centerline{$JQ-W=U_1-U_0$.}
+\indent 从此得下一不等式\\
+\centerline{$W<F_0-F_1$.}
+\indent （3）{\fangsong 可用能}  首先假设在变化中$F$的值减小，即\\
+\centerline{$F_1<F_0$  \text{或}  $F_0-F_1>0$.}
+若该变化为可逆的，则$W>0$,所产生的机械工作等于$F$的减小．
+若该变化为不可逆的．则$W$可以为正，也可以为负；工作的产生较
+小，小于$F$的减小；甚至工作的值可为负数，这就是说，将要消耗工
+作才能把这个变化实现．其实，这一个变化，若用可逆方式进行，应
+当便我们获得工作．\\
+\indent 所以由(34)式规定的态函数$F$有\text{\heiti 可用能}之称．可用能系指可
+以\uwavealt{用来产生机械工作}而言．从所考虑的变化中，我们能获得的机
+诫工作，\uwavealt{至多}等于$F$值的减少，而此最大工作只能在可逆方式中
+得到．\\ 
+\indent 其次假定$F_1>F_0$, 则非消耗工作不能发生我们所考虑的变
+化；在可逆方式中．消耗工作最小．\\
+\indent 总而言之，\uwavealt{不可逆性无非表示浪费机械工作而已}，所费多于所
+当费，或所得少于所可得，都是浪费．\\
+\indent 与此同时，系统所产生的热量$(-Q)$，以在可逆方式中所产生
+ 的为最小．\\
+\indent 若在系统中．只有各部分的位置变动，而旦是可逆的，则可用
+能就是内能，两者没有分别，因为此时系统的熵没有改变的缘故．\\
+\indent 但在一般情形下，并不如是，可用能常较内能为少．可用能只
+是内能中的一部分．这可由定义$F=U-J\Theta S$而知道．内能中只
+有一部分可以用来产生机械工作．\\
+\indent 在系统的等温变化中，可用能也称自由能．仅与其四周交换
+热量的系统，从状态（0)到状态(1)的变化若是等温的，则系统内部
+有均匀的温度．如果这个等温变化中的热量交换又是可逆的，
+则系统温度与其四周温度只能相差无穷小，即$T=\Theta$．于是可用
+能的定义式（34)可以写成\\
+\centerline{$ F=U-JTS$，}
+式中的$F$叫做\text{\heiti 自由能}．\\
+\indent 同样可以得出\\
+\centerline{$W \le F_0-F_1$ ．}
+\indent 这就是说，系统所能做出的机械工作不大于系统自由能的减少．
+对于可逆等温过程，系统做出的机械工作最大，等于它的自由能的
+减少．\\
+\indent 由于自由能的上述性质，很据定义式（37)，有$U=F+JTS$,
+可以认为$F$是内能的一部分．而这一部分是可以用来产生机械工
+作的，因而可以认为$F$是内能的自由部分．这是为什么$F$叫做自
+由能的原因．同时$JTS$偶而叫做\uwavealt{束缚能}．\\
+\indent 可用能在可逆等温过程中的地位，类似于内能在绝热过程中
+的地位．\\ 
+end{document}
