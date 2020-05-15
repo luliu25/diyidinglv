@@ -1,0 +1,53 @@
+\documentclass{ctexbook}
+\usepackage{ctex,amsmath}
+\usepackage[papersize={13.56cm},lmargin=1.5cm,rmargin=1.5cm]{geometry}
+\newcommand{\dbar}{d\hspace*{0.1em}}
+\renewcommand\thesection{\arabic{section}.}
+\renewcommand\thesubsection{(\alph{subsection})}
+%
+\usepackage{titlesec}
+\titleformat{\section}{\large\centering}{\thesection}{8pt}{}
+\titleformat{\subsection}{\normalsize\heiti\bfseries}{\qquad\thesubsection}{6pt}{}
+%
+\titlespacing{\section}{0pt}{5pt}{0pt}
+\titlespacing{\subsection}{0pt}{0pt}{0pt}
+\catcode `\@=11
+\def\uwavealt{\bgroup \markoverwith{\lower5.5\p@\hbox{\sixly \char58}}\ULon}
+@@ -29,15 +26,13 @@ catcode `\@=11
+\newcommand\parallelogram{
+   \mathord{\text{
+      \tikz[baseline]
+         \draw (0em, .1ex) -- ++( .9em, 0ex) --
+            ++(.2em, 1.2ex) -- ++(-0.9em, 0ex) -- cycle;}}}
+% 用于平行四边形符号;
+\begin{document}
+\setcounter{section}{28}
+\setcounter{page}{98}
+\section{理想气体的可用能}
+  可用能比之内能更饶意义．例如取气体而压缩之，维持其温
+度与四周相等，则其内能不变，此时放出的热量．适等于压缩时所
+消耗的工作，但毫无实用价值可言．虽然如此．我们皆知压缩了的
+气体可以做功，可以开动机器，可以发射鱼雷，足见其\uwavealt{可用能}已有
+增加．\\
+\indent 若气体为理想气体，则它所增加的可用能适等于我们在压缩
+中所消耗的工作．证明如下：\\
+\indent 已知理想气体的内能为\\
+\centerline{$U=JC_vT$,}
+熵为[见第27节（d）的例5]\\
+\centerline{$S=C_v In(Tv^{\gamma-1})$.}
+\indent 以$U$和$S$表出函数$F$，则得\\
+\centerline{$F=JC_vT-J \Theta C_v In(Tv^{\gamma-1})$.}
+\indent 在等温条件下，即$T=\Theta$不变，从体积$v_0$压缩到$v_1$时，可用
+能$F$的变化为\\
+\centerline{$F_1-F_0=J \Theta C_v In(\dfrac{v_0}{v_1})^{\gamma-1}=J \Theta C_v(\gamma-1)In \dfrac{v_0}{v_1}$.} 
+\indent 又由迈尔公式，有\\
+\centerline{$JC_v(\gamma-1)=J(C_p-C_v)=\dfrac{m}{M}R$,}
+把它代入上式，得\\
+\centerline{$F_1-F_0=\dfrac{m}{M}R \Theta In \dfrac{v_0}{v_1}$.} 
+\indent 在另一方面，在四周温度为$\Theta$的媒质的包围之下，保持气体
+的温度不变，把它从体积$v_0$压缩到$v_1$，此中所消耗的工作为\\
+\centerline{$W'=-\int_{v_0}^{v_1}pdv=-\dfrac{m}{M}R \Theta \int_{v_0}^{v_1}\dfrac{dv}{v}=\dfrac{m}{M}R \Theta In \dfrac{v_0}{v_1}$.} 
+\indent 于是我们得\\
+\centerline{$F_1-F_0=W'$,}
+这就是我们所要证明的．\\
+\end{document}
