@@ -21,7 +21,7 @@
             ++(.2em, 1.2ex) -- ++(-0.9em, 0ex) -- cycle;}}}
 % 用于平行四边形符号;
 \begin{document}
-\setcounter{section}{25}
+\setcounter{section}{28}
 \setcounter{page}{95}
 \chapter{可用能}
 \section{可用能的定义}
