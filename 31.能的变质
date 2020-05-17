@@ -1,0 +1,35 @@
+\documentclass{ctexbook}
+\usepackage{ctex,amsmath}
+\usepackage[papersize={13.56cm},lmargin=1.5cm,rmargin=1.5cm]{geometry}
+\newcommand{\dbar}{d\hspace*{0.1em}}
+\renewcommand\thesection{\arabic{section}.}
+\renewcommand\thesubsection{(\alph{subsection})}
+%
+\usepackage{titlesec}
+\titleformat{\section}{\large\centering}{\thesection}{8pt}{}
+\titleformat{\subsection}{\normalsize\heiti\bfseries}{\qquad\thesubsection}{6pt}{}
+%
+\titlespacing{\section}{0pt}{5pt}{0pt}
+\titlespacing{\subsection}{0pt}{0pt}{0pt}
+\catcode `\@=11
+\def\uwavealt{\bgroup \markoverwith{\lower5.5\p@\hbox{\sixly \char58}}\ULon}
+\newcommand\parallelogram{
+   \mathord{\text{
+      \tikz[baseline]
+         \draw (0em, .1ex) -- ++( .9em, 0ex) --
+            ++(.2em, 1.2ex) -- ++(-0.9em, 0ex) -- cycle;}}}
+% 用于平行四边形符号;
+\begin{document}
+\setcounter{section}{30}
+\setcounter{page}{101}
+\section{能的变质}
+   在\uwavealt{孤立}系统中，恒有\\
+\centerline{$W=0$,}
+和\\
+\centerline{$F_1<F_0$;}
+从此得出结论：\\
+\indent \uwavealt{在孤立系统中，可用能只有减少}.\\
+\indent 在这样一个系统中，\uwavealt{能为常往不灭}，但是越来越\uwavealt{不中用}：其\uwavealt{量}
+未变，其\uwavealt{质}变坏了.要它不变质，在孤立系统中，惟有所经历的一
+切变化都是可逆的才行.\\
+\end{ducoment}
