@@ -13,7 +13,7 @@
 \titlespacing{\subsection}{0pt}{0pt}{0pt}
 \catcode `\@=11
 \def\uwavealt{\bgroup \markoverwith{\lower5.5\p@\hbox{\sixly \char58}}\ULon}
-@@ -29,15 +26,13 @@ catcode `\@=11
+% 把 "@@ -29,15 +26,13 @@ catcode `\@=11" 删去，否则不能排版。
 
 \newcommand\parallelogram{
    \mathord{\text{
@@ -72,13 +72,14 @@ $v_2$的自由膨胀中，气体的温度前后相同．自由膨胀是一个不
 为独立变数．其状态方程为\\
 \centerline{$pv=\dfrac{m}{M} RT$.}
 \indent 根据第二章中的式（7'），以$dp$和$dv$表出关于\uwavealt{可逆变化}的
-$\dbar Q_\text{可逆}$的值，将其中的偏微商$(\dfrac{\partial v}{\partial t})_p$和$(\dfrac{\partial v}{\partial t})_v$各从状态方程求出
+$\dbar Q_\text{可逆}$的值，将其中的偏微商$\left(\dfrac{\partial v}{\partial t}\right)_p$和$\left(\dfrac{\partial v}{\partial t}\right)_v$各从状态方程求出
 而代入，则得\\
+%    你可以排版试一下, 看 $( \dfrac{a}{b} )$ 和  $\left( \dfrac{a}{b} \right)$ 有什么区别。
 \centerline{$\dbar Q_\text{可逆}=\dfrac{C_p}{\dfrac{m}{M} R} pdv+\dfrac{C_v}{\dfrac{m}{M} R} v dp$}
 (容易验明$\dbar Q_\text{可逆}$不是全微分）．
 \indent 于是有\\
 \centerline{$dS=\dfrac{\dbar Q_\text{可逆}}{T}=\dfrac{C_p}{\dfrac{m}{M} RT}pdv+\dfrac{C_v}{\dfrac{m}{M} RT}dvp$.}
-以$pv$代$\dfrac{m}{M}RT，则成\\
+以$pv$代$\dfrac{m}{M}RT$，则成\\
 \centerline{$dS=C_p \dfrac{dv}{v}+C_v\dfrac{dp}{p}$.}
 这是一个全微分．把它积分得\\
 \centerline{$S=C_p Inv+C_vInp+ \text{常数}$}
@@ -104,6 +105,6 @@ $\dbar Q_\text{可逆}$的值，将其中的偏微商$(\dfrac{\partial v}{\parti
 与此类似，能量之表现为热量的，则有\\
 \centerline{$\dbar Q_\text{可逆}=TdS$.}
 所以$T$和$S$之成为一对变数，正如$p$和$v$之成为一对变数一样．\\
-\indent $\dbar W_\text{可逆}$不是全微分和$\dbar Q_\text{可逆}$不是去微分是一样，$\dfrac{\dbar Q_\text{可逆}}{T}=dS$
-是一个全微分，又和$\dfrac{\dbar W_\text{可逆}}{p}=dv$是一个区微分一样．\\
+\indent $\dbar W_\text{可逆}$不是全微分和$\dbar Q_\text{可逆}$不是全微分一样，$\dfrac{\dbar Q_\text{可逆}}{T}=dS$
+是一个全微分，又和$\dfrac{\dbar W_\text{可逆}}{p}=dv$是一个全微分一样．\\
 \end{document}
