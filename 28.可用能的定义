@@ -13,7 +13,7 @@
 \titlespacing{\subsection}{0pt}{0pt}{0pt}
 \catcode `\@=11
 \def\uwavealt{\bgroup \markoverwith{\lower5.5\p@\hbox{\sixly \char58}}\ULon}
-% "@@ -29,15 +26,13 @@ catcode `\@=11" 这一行应删除，否则无法排版。
+%% "@@ -29,15 +26,13 @@ catcode `\@=11" 这一行应删除，否则无法排版。
 \newcommand\parallelogram{
    \mathord{\text{
       \tikz[baseline]
@@ -46,7 +46,7 @@
 在变化中的系统供给热量于四周的空气$(Q<0)$;这两个动作能够
 \uwavealt{自发}进行，丝毫不费我们的事．\\
 \indent （1）{\fangsong 可逆变化}  命$\varTheta$为围绕系统四周的媒质的温度．设系统
-%    你可以排版试一下，$\Theta$ 是正体大写, $\varTheta$ 是斜体大写。
+%%    你可以排版试一下，$\Theta$ 是正体大写, $\varTheta$ 是斜体大写。
 从状态（0）变化到状态（1）；设$Q$为系统所吸收的热量，$W$为系统
 所产生的工作；又设这个变化为可逆的．\\
 \indent 该系统的熵从$S_0$变为$S_1$．\\
