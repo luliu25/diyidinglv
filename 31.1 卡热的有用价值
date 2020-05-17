@@ -1,0 +1,75 @@
+\documentclass{ctexbook}
+\usepackage{ctex,amsmath}
+\usepackage[papersize={13.56cm},lmargin=1.5cm,rmargin=1.5cm]{geometry}
+\newcommand{\dbar}{d\hspace*{0.1em}}
+\renewcommand\thesection{\arabic{section}.}
+\renewcommand\thesubsection{(\alph{subsection})}
+%
+\usepackage{titlesec}
+\titleformat{\section}{\large\centering}{\thesection}{8pt}{}
+\titleformat{\subsection}{\normalsize\heiti\bfseries}{\qquad\thesubsection}{6pt}{}
+%
+\titlespacing{\section}{0pt}{5pt}{0pt}
+\titlespacing{\subsection}{0pt}{0pt}{0pt}
+\catcode `\@=11
+\def\uwavealt{\bgroup \markoverwith{\lower5.5\p@\hbox{\sixly \char58}}\ULon}
+\newcommand\parallelogram{
+   \mathord{\text{
+      \tikz[baseline]
+         \draw (0em, .1ex) -- ++( .9em, 0ex) --
+            ++(.2em, 1.2ex) -- ++(-0.9em, 0ex) -- cycle;}}}
+% 用于平行四边形符号;
+\begin{document}
+\setcounter{section}{31}
+\setcounter{page}{101}
+\section{1 卡热的有用价值}
+   两个1卡路里的热量，量是相等的，但是价值可以大不相同．
+热量的价值如何决定的呢？决定于它所能产生工作的多少．也就是
+决定于它所居的温度，在室温下取得的热量毫无用处．如所取得
+的热量，其温度与室温相差（元论高于或低于）愈远，则能产生工作
+愈多，它的价值也就愈高．\\
+\indent 设有温度为$T$的热源，其四周媒质的温度为$\varTheta$，问从该热源取
+出$Q$卡路里来可以得到多少工作？为了解答这一问题，计算该\uwavealt{热源}
+由于放出热量$Q$而减小的可用能就是．\\
+\indent 依题意，有\\
+\centerline{$U_1-U_0=-JQ$,}
+和\\ 
+\centerline{$S_1-S_0=-\dfrac{Q}{T}$.} 
+又从第28节公式（34)得\\
+\centerline{$F_0-F_1=J \varTheta(S_1-S_0)-(U_1-U_0)=JQ-JQ\dfrac{\varTheta}{T}=JQ(1-\dfrac{\varTheta}{T})$.}
+\indent (1) 若热源较热于其四周，则上式括弧内的值为正，又若
+$Q>0$（热源放热于外），则$F_0-F_1>0$．从这个变化可以获得工
+作，其值根据公式（35）为\\ 
+\centerline{$W=JQ(1-\dfrac{\varTheta}{T})$.} 
+若$T$较$\varTheta$所高无几，这个工作很小;$T$愈高，则工作的值也就愈
+大．\\
+\indent 其实，我们早已知道获得这个工作$W$的方法，就是使一种流体
+经历一个卡诺循环，以热源$T$作为温源，以其四周媒质$\varTheta$作为冷
+源．于是由热机的效率\\
+\centerline{$\eta =1-\dfrac{\varTheta}{T}$,}  
+又可立刻得出上面的结果．\\
+\indent 当热量从温度较高的物体中自发地传到温度较低的物体时，
+则能常变质．例如蒸汽机的炉火中火焰的温度很高，$T=1800K$,
+又设其四周的温度$\varTheta=300K$, 倘能把这个火焰的热量直接变成
+为工作，其效率为\\
+\centerline{$1-\dfrac{300}{1800}=0.83$.}
+但是实际上，我们只能利用这个火焰来加热汽锅的温度不过
+$500K$,因此其效率仅为\\
+\centerline{$1-\dfrac{300}{500}=0.40$,}
+足见损失之大.这在实际上为无可避免的事．\\
+\indent （2）若$T<\varTheta $，而$Q<0$,即一热源的温度较低于其四周，而又
+能从其四周\uwavealt{吸收}热量；在这种情形下，$W$的值仍为正.例如冰块在
+空气中自发熔化；我们可以利用这一现象以产生工作，只需以其四
+周空气作为\uwavealt{温源}，而以冰块作为\uwavealt{冷源}.将来燃料缺乏之时，我们可
+把南北极的冰块运到温带，作为产生能量之用.此在理论上，并不
+荒谬，其用途将和我们今日用媒一样，包括\uwavealt{取暖}在内.盖由此可得
+工作，由工作再得热量，用冰取暖，其何难哉？\\
+\indent \textbf{\heiti 不可用能与熵}   设有温度为$T$的热量$Q$，处于温度为$\varTheta$的媒
+质包围之中，其可用来产生机械工作的部分为$Q(1-\dfrac{\varTheta}{T})$，不可用
+的部分为$Q\dfrac{\varTheta}{T}$.倘把该热量$Q$先传导给温度$T'$的另一物体，
+此时该热量的可用部分为$Q(1-\dfrac{\varTheta}{T'})$，不可用的部分成为
+$Q\dfrac{\varTheta}{T'}$.于是不可用能增加$Q(\dfrac{1}{T'}-\dfrac{1}{T})\varTheta$.同时温度分别$T$和
+$T'$的这两个物体所成系统的熵[见第27节（d）例2]也增加$\Delta S=
+\dfrac{Q}{T'}-\dfrac{Q}{T}$.可见不可用能（即束缚能）的增加$=\varTheta \times \Delta S$.所以熵是
+能的不可用程度的量度．\\
+\end{ducoment}
