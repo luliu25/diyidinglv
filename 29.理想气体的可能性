@@ -13,7 +13,7 @@
 \titlespacing{\subsection}{0pt}{0pt}{0pt}
 \catcode `\@=11
 \def\uwavealt{\bgroup \markoverwith{\lower5.5\p@\hbox{\sixly \char58}}\ULon}
-@@ -29,15 +26,13 @@ catcode `\@=11
+% @@ -29,15 +26,13 @@ catcode `\@=11  % 这一行要删除，否则无法排版。
 \newcommand\parallelogram{
    \mathord{\text{
       \tikz[baseline]
@@ -36,15 +36,15 @@
 熵为[见第27节（d）的例5]\\
 \centerline{$S=C_v In(Tv^{\gamma-1})$.}
 \indent 以$U$和$S$表出函数$F$，则得\\
-\centerline{$F=JC_vT-J \Theta C_v In(Tv^{\gamma-1})$.}
-\indent 在等温条件下，即$T=\Theta$不变，从体积$v_0$压缩到$v_1$时，可用
+\centerline{$F=JC_vT-J \varTheta C_v In(Tv^{\gamma-1})$.}
+\indent 在等温条件下，即$T=\varTheta$不变，从体积$v_0$压缩到$v_1$时，可用
 能$F$的变化为\\
 \centerline{$F_1-F_0=J \Theta C_v In(\dfrac{v_0}{v_1})^{\gamma-1}=J \Theta C_v(\gamma-1)In \dfrac{v_0}{v_1}$.} 
 \indent 又由迈尔公式，有\\
 \centerline{$JC_v(\gamma-1)=J(C_p-C_v)=\dfrac{m}{M}R$,}
 把它代入上式，得\\
-\centerline{$F_1-F_0=\dfrac{m}{M}R \Theta In \dfrac{v_0}{v_1}$.} 
-\indent 在另一方面，在四周温度为$\Theta$的媒质的包围之下，保持气体
+\centerline{$F_1-F_0=\dfrac{m}{M}R \varTheta In \dfrac{v_0}{v_1}$.} 
+\indent 在另一方面，在四周温度为$\varTheta$的媒质的包围之下，保持气体
 的温度不变，把它从体积$v_0$压缩到$v_1$，此中所消耗的工作为\\
 \centerline{$W'=-\int_{v_0}^{v_1}pdv=-\dfrac{m}{M}R \Theta \int_{v_0}^{v_1}\dfrac{dv}{v}=\dfrac{m}{M}R \Theta In \dfrac{v_0}{v_1}$.} 
 \indent 于是我们得\\
