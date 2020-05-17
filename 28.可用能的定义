@@ -13,7 +13,7 @@
 \titlespacing{\subsection}{0pt}{0pt}{0pt}
 \catcode `\@=11
 \def\uwavealt{\bgroup \markoverwith{\lower5.5\p@\hbox{\sixly \char58}}\ULon}
-@@ -29,15 +26,13 @@ catcode `\@=11
+% "@@ -29,15 +26,13 @@ catcode `\@=11" 这一行应删除，否则无法排版。
 \newcommand\parallelogram{
    \mathord{\text{
       \tikz[baseline]
@@ -45,7 +45,8 @@
 置于正在变化中的系统$(Q>0)$，又如让热水在空气中冷却，则正
 在变化中的系统供给热量于四周的空气$(Q<0)$;这两个动作能够
 \uwavealt{自发}进行，丝毫不费我们的事．\\
-\indent （1）{\fangsong 可逆变化}  命$\Theta$为围绕系统四周的媒质的温度．设系统
+\indent （1）{\fangsong 可逆变化}  命$\varTheta$为围绕系统四周的媒质的温度．设系统
+%    你可以排版试一下，$\Theta$ 是正体大写, $\varTheta$ 是斜体大写。
 从状态（0）变化到状态（1）；设$Q$为系统所吸收的热量，$W$为系统
 所产生的工作；又设这个变化为可逆的．\\
 \indent 该系统的熵从$S_0$变为$S_1$．\\
@@ -54,7 +55,7 @@
 讨论，我们已经知道，$W$和$Q$仅依初、终两态而决定．现在让我们
 进一步求出$W$和$Q$的值．\\
 \indent 由于变化是可逆的，根据热力学第二律我们有\\
-\centerline{$S_1-S_0=\dfrac{Q}{\Theta}$;}
+\centerline{$S_1-S_0=\dfrac{Q}{\varTheta}$;}
 又从第一定律有\\
 \centerline{$U_1-U_0=JQ-W$.}
 \indent 根据这两个式子，我们可用$S$的变化来表出$Q$，用$S$和$U$的变
@@ -64,8 +65,8 @@
 \indent 命\\
 \centerline{$F=U-J \Theta S$,}
 则$F$也为系统的一个态函数．\\
-\centerline{$F_0=U_0-J\Theta S_0 $}\text{为$F$在状态（0）的值}；\\
-\centerline{$F_1=U_1-J\Theta S_1 $}\text{为$F$在状态（1）的值}；\\
+\centerline{$F_0=U_0-J\Theta S_0 $ 为$F$在状态（0）的值；}\\
+\centerline{$F_1=U_1-J\Theta S_1 $ 为$F$在状态（1）的值；}\\
 \indent 于是从上式，得\\
 \centerline{$W=F_0-F_1$.}
 \indent 可见系统从状态（0）由可逆变化变到状态（1）时，所产生的机
@@ -75,7 +76,7 @@
 产生的工作为$W$．\\
 \indent 上面式（B）依然成立，而式（A）则须代以不等式【第27节式
 （31）】，有\\
-\centerline{$\dfrac{Q}{\Theta}<S_1-S_0$,}
+\centerline{$\dfrac{Q}{\varTheta}<S_1-S_0$,}
 和\\
 \centerline{$JQ-W=U_1-U_0$.}
 \indent 从此得下一不等式\\
@@ -100,12 +101,12 @@
 \indent 若在系统中．只有各部分的位置变动，而旦是可逆的，则可用
 能就是内能，两者没有分别，因为此时系统的熵没有改变的缘故．\\
 \indent 但在一般情形下，并不如是，可用能常较内能为少．可用能只
-是内能中的一部分．这可由定义$F=U-J\Theta S$而知道．内能中只
+是内能中的一部分．这可由定义$F=U-J\varTheta S$而知道．内能中只
 有一部分可以用来产生机械工作．\\
 \indent 在系统的等温变化中，可用能也称自由能．仅与其四周交换
 热量的系统，从状态（0)到状态(1)的变化若是等温的，则系统内部
 有均匀的温度．如果这个等温变化中的热量交换又是可逆的，
-则系统温度与其四周温度只能相差无穷小，即$T=\Theta$．于是可用
+则系统温度与其四周温度只能相差无穷小，即$T=\varTheta$．于是可用
 能的定义式（34)可以写成\\
 \centerline{$ F=U-JTS$，}
 式中的$F$叫做\text{\heiti 自由能}．\\
