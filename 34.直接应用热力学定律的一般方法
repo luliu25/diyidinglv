@@ -1,0 +1,77 @@
+\documentclass{ctexbook}
+\usepackage{ctex,amsmath}
+\usepackage[papersize={13.56cm},lmargin=1.5cm,rmargin=1.5cm]{geometry}
+\newcommand{\dbar}{d\hspace*{0.1em}}
+
+\renewcommand\thesection{\arabic{section}.}
+\renewcommand\thesubsection{(\alph{subsection})}
+%
+\usepackage{titlesec}
+\titleformat{\section}{\large\centering}{\thesection}{8pt}{}
+\titleformat{\subsection}{\normalsize\heiti\bfseries}{\qquad\thesubsection}{6pt}{}
+%
+\titlespacing{\section}{0pt}{5pt}{0pt}
+\titlespacing{\subsection}{0pt}{0pt}{0pt}
+
+\catcode `\@=11
+\def\uwavealt{\bgroup \markoverwith{\lower5.5\p@\hbox{\sixly \char58}}\ULon}
+
+\newcommand\parallelogram{
+   \mathord{\text{
+      \tikz[baseline]
+         \draw (0em, .1ex) -- ++( .9em, 0ex) --
+            ++(.2em, 1.2ex) -- ++(-0.9em, 0ex) -- cycle;}}}
+% 用于平行四边形符号;
+\begin{document}
+\setcounter{section}{33}
+\setcounter{page}{108}
+\chapter{第五章热力学定律的应用}
+    在热力学两个定律建立之后，热力学的进一步发展主要在于
+把这两个定律应用到各种具体向题中去．在应用的过程中发展了
+热力学的数学理论，找到了反映物质的各种性质的相应的热力学
+函数，进一步研究了各种物质的具体特性和相应的热力学函数的
+具体形式，阐明了各种物质在相变和化学反应中所遵循的具体规
+律等等．所有这些研究在本书里将不详细叔述．我们着重介绍直
+接应用热力学定律的方法．应用所得的结果，当然，又是十分重要
+的．\\ 
+\section{34．直接应用热力学定律的一般方法}
+   热力学定律规定了人类活动的可能范围．例如热力学函数中
+直接反映热力学第一定律的是内能，直接反映第二定律的是熵．内
+能的特点是，在孤立系统中，守恒不变．熵的特点是，一个绝热过
+程总是朝着熵增加的方向进行的．这些特点都限制着人类活动的
+可能范围．\\
+\indent 人类活动的可能范围怎样受着热力学定律限制的呢？反映物
+质关于力的和热的性质的系数之间，根据热力学定律．存在着\uwavealt{必然}
+的关系．这些关系是不以人们的意志为转移的．否则，对于状态
+方程为已知的一种物质，倘然我们能够随心所欲地选择热量系数
+的值的话，那末第一种和第二种永动机都将是不难想象的了．\\
+\indent 永动机之不可能，只是一个广泛的，甚至可说，是笼统的概念．
+从这样一个广泛的概念出发，居然可从某些系数计算出另一些系
+数的值，这实在是足以令人惊奇叹服的事情，\\
+\indent 热力学第一和第二定律不是由某个或某些实验直接证明的，
+而是无数经验的总结．它们具有高度的可靠性和普遍性．我们从
+来没有遇到根据热力学定律得到的结论有与事实不符的情形，只
+要在推论中没有加上其它不正确的假设．在另一方面，正由于热
+力学定律具有普遍性，我们不应该也不可能希望单靠它们得出某
+种特殊物质的某种特殊性质的知识．为了达到这后一目的，我们
+必须把热力学定律与有关物质的有关方面的实验绪果结合起来加
+以推论．\\
+\indent 直接应用热力学定律的一般方法是这样的：\\
+\indent 先选定必需而足够的独立变数，以规定所讨论的系统的状态；
+独立变数的数目是有一定的，但是它们的选择是任意的．\\
+\indent 其次设想系统经历着一个可逆的无穷小变化；以所选定的变
+数的无穷小增量，表出在该变化中所供给于该系统的热量$\dbar Q_\text{可逆}$
+和由该系统所产生的工作$\dbar W_\text{可逆}$．由此计算其内能和熵的无穷小
+变量：\\ 
+\centerline{$dU=J \dbar_\text{可逆}-\dbar W_\text{可逆}$}
+和 
+\centerline{$dS=\dfrac{\dbar Q_\text{可逆}}{T}$,}
+式中$T$为供$\dbar Q_\text{可逆}$的热源的温度，由于变化是可逆的，也就为系
+统中参加接受$\dbar Q_\text{可逆}$的那部分的温度．$dU$和$dS$为独立变数的
+无穷小增量表出的一次方程，方程式中的系数又都是这些变数的
+函数．\\
+\indent 最后把己$dU$和$dS$为全微分的条件写出来，就得到反映构成
+系统的物质的性质的系数之间\uwavealt{必然}关系．\\
+\indent 作为热力学定律应用的例子，我们在下面几节中讨论若干具
+体问题．\\ 
+\end{document}
