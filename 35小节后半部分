@@ -30,7 +30,7 @@
 \indent 把从式（46）得出的$T(\dfrac{\partial p}{\partial T})_v$的值代入式（43），我们有\\
 \centerline{$C_p-C_v=\dfrac{1}{J}[(\dfrac{\partial U}{\partial v})_T+p](\dfrac{\partial v}{\partial T})_p$.}
 从此可以看出，水银的两种比热之差，几乎完全是由于内能随体积
-而改变的影响.这与理想气体的情形完全不同，因为理想气体的
+而改变的影响．这与理想气体的情形完全不同，因为理想气体的
 内能不随体积而变，比热之差是完全由压缩功引起的.\\
 \indent （2） {\fangsong 以$p$和$T$为独立变数}：则有\\
 \centerline{$\dbar Q_\text{可逆}=C_p dT+h dp$,}
@@ -43,9 +43,13 @@
 和\\
 \centerline{$(\dfrac{\partial C_p}{\partial p})_T=(\dfrac{\partial h}{\partial T})_P-\dfrac{h}{T}$.}
 \indent 从这两式又得出热力学定律所加于我们的两个重要关系\\
-\centerline{h=-dfrac{T}{J}(\dfrac{\partial v}{\partial T})_p$}
+\begin{equation}\tag{47}
+h=-\dfrac{T}{J}\left(\dfrac{\partial v}{\partial T}\right)_p
+\end{equation}
 和\\
-\centerline{$(\dfrac{\partial C_p}{\partial p})_T=-dfrac{T}{J}(\dfrac{\partial^2 v}{\partial T^2})_p$.}
+\begin{equation}\tag{48}
+\left(\dfrac{\partial C_p}{\partial p}\right)_T=-\dfrac{T}{J}\left(\dfrac{\partial^2 v}{\partial T^2}\right)_p.
+\end{equation}
 前者的意义将于第38节中述之，后者表示定压比热随压强的改变
 与状态方程$v=v(p,T)$之间的联系.\\
 \indent 以$p$、$T$为独立变数时的公式（47）和（48），与以$v$、$T$为独立
@@ -62,26 +66,32 @@
 和$dT$表示，可于其两端各加$d(pv)=p dv+v dp$,就得\\
 \centerline{$d(U+pv)=JTdS+vdp$.}
 \indent 命\\
-\centerline{$H=U+pv$}
-并把它叫做\text{\heiti 烩}，则烩$H$也是一个态函数，因为$U$和$pv$d都是态函
+\begin{equation}\tag{49}
+H=U+pv
+\end{equation}
+并把它叫做\textbf{\heiti 焓}，则焓$H$也是一个态函数，因为$U$和$pv$d都是态函
 数.于是上式可以写成\\
 \centerline{$dH=JT(\dfrac{\partial S}{\partial T})_p dT+[JT(\dfrac{\partial S}{\partial p})_T+v]dp$.}
 \indent 由于$dH$是全微分，我们得\\
-\centerline{$(\dfrac{\partial H}{\partial T})_p=JT(\dfrac{\partial S}{\partial T})_p$}
+\begin{equation}\tag{50}
+\left(\dfrac{\partial H}{\partial T}\right)_p=JT\left(\dfrac{\partial S}{\partial T}\right)_p
+\end{equation}
 和\\
-\centerline{$(\dfrac{\partial H}{\partial p})_T=JT(\dfrac{\partial S}{\partial p})_T+v$.}
+\begin{equation}\tag{51}
+\left(\dfrac{\partial H}{\partial p}\right)_T=JT\left(\dfrac{\partial S}{\partial p}\right)_T+v.
+\end{equation}
 \indent 式（50）所表示的$\dfrac{1}{J}(\dfrac{\partial H}{\partial T})_p$和$T(\dfrac{\partial S}{\partial T})_p$之间的等同关系也是
 显而易见的，因为$T(\dfrac{\partial S}{\partial T})_p=C_p$,而在压强不变时，\\
 \centerline{$C_p=lim_{\Delta T\rightarrow 0} \dfrac{\Delta U+p\Delta v}{J\Delta T}=\dfrac{1}{J}[(\dfrac{\partial U}{\partial T})_p+p(\dfrac{\partial v}{\partial T})_p]=\dfrac{1}{J}(\dfrac{\partial H}{\partial T})_p$.}
 \indent 又命\\
 \centerline{$G=U-JTS+pv$}
-叫做\text{\heiti 自由烩}，也是一个态函数，则有\\
+叫做\textbf{\heiti 自由焓}，也是一个态函数，则有\\
 \centerline{$dG=d(U-JTS+pv)=-JSdT+vdp$.}
 把$dG$为全微分的条件写出，就得\\
 \centerline{$J(\dfrac{\partial S}{\partial p})_T=-(\dfrac{\partial V}{\partial T})_p$.}
-这也是\text{\heiti 克麦斯韦关系式}之一.把它代入式（51）得\\
+这也是\textbf{\heiti 克麦斯韦关系式}之一.把它代入式（51）得\\
 \centerline{$(\dfrac{\partial H}{\partial p})_T=v-T(\dfrac{\partial v}{\partial T})_p$.}
-这个方程给出烩随压强的改变与状态方程$v=v(p,T)$之间的联
+这个方程给出焓随压强的改变与状态方程$v=v(p,T)$之间的联
 系.\\
 \indent 以$p$、$T$为独立变数时的公式（50）、（51）和（54），与以$v$、$T$为
 独立变数时的公式（44）、（45）和（46）相当.\\
