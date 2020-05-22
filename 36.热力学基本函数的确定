@@ -1,0 +1,79 @@
+\documentclass{ctexbook}
+\usepackage{ctex,amsmath}
+\usepackage[papersize={13.56cm},lmargin=1.5cm,rmargin=1.5cm]{geometry}
+\newcommand{\dbar}{d\hspace*{0.1em}}
+
+\renewcommand\thesection{\arabic{section}.}
+\renewcommand\thesubsection{(\alph{subsection})}
+%
+\usepackage{titlesec}
+\titleformat{\section}{\large\centering}{\thesection}{8pt}{}
+\titleformat{\subsection}{\normalsize\heiti\bfseries}{\qquad\thesubsection}{6pt}{}
+%
+\titlespacing{\section}{0pt}{5pt}{0pt}
+\titlespacing{\subsection}{0pt}{0pt}{0pt}
+
+\catcode `\@=11
+\def\uwavealt{\bgroup \markoverwith{\lower5.5\p@\hbox{\sixly \char58}}\ULon}
+
+\newcommand\parallelogram{
+   \mathord{\text{
+      \tikz[baseline]
+         \draw (0em, .1ex) -- ++( .9em, 0ex) --
+            ++(.2em, 1.2ex) -- ++(-0.9em, 0ex) -- cycle;}}}
+% 用于平行四边形符号;
+\begin{document}
+\setcounter{section}{35}
+\setcounter{page}{117}
+\section{热力学基本函数的确定}
+    在上节中得出的这些热力学关系有什么用处呢？用处之一是
+确定热力学基本函数.\\
+\indent 先从式（48）\\
+\centerline{$(\dfrac{\partial C_p}{\partial p})_T=-\dfrac{T}{J}(\dfrac{\partial^2 v }{\partial T^2})_p$}
+说起，求积分①得\\
+\centerline{$C_p=V_{P0}-\dfrac{T}{J}\int_{p0}^{p}(\dfrac{\partial^2 v }{\partial T^2})_P dp$,}
+其中$C_{p0}$是在压强$p_0$的定压热容量，积分是在温度固定为$T$的
+条件下施行.由这个式子看出，只要在某一压强$p_0$下测得热
+容量$C_{p0}$，则在任何压强下的热容量都可根据状态方程所给的
+$(\dfrac{\partial^2 v }{\partial T^2})_P$而算出.\\
+\indent 在热力学中所讨论的各种态函数叫做\textbf{\heiti 热力学函数}.根据这个
+意义，由实验结果得出的状态方程也是一个热力学函数.最基本的
+热力学函数有三，即状态方程、内能和熵，因为其他热力学函数如
+焓、自由能、自由焓等，都可由这三个基本函数得出.\\
+\indent 对于一般的均匀流体，定压比热定体比热容易测定.因此，
+\indent {\fangsong ①   应该指出，这里有个例外：如果象理想气体那样$(\dfrac{\partial^2 v }{\partial T^2})_P=0$,我们不能在这
+里求积分而得出$C_p=C_{P0}$是一个常数的错误结果.$(\dfrac{\partial C_p }{\partial p})_T=0$只能告诉我们$C_p$与$p$
+无关，但它可以是$T$的函数}.\\
+在\uwavealt{实用}上，以选$p$、$T$为独立变数更加方便.\\
+\indent \textbf{\heiti  (a)   内能函数}\\
+\indent 关于内能函数在选$p$、$T$为独立变数时，以先给焓为便.由焓
+的全微分\\
+\centerline{$dH=(\dfrac{\partial H}{\partial T})_p dT+(\dfrac{\partial H}{\partial T})_T dp$,}
+并把（52）和（54）两式\\
+\centerline{$C_p=\dfrac{1}{J}(\dfrac{\partial H}{\partial T})_p,  (\dfrac{\partial H}{\partial p})_T=v-T(\dfrac{\partial v}{\partial T})_p$}
+代入，就得\\
+\centerline{$dH=JC_pdT+[v-T(\dfrac{\partial v}{\partial T})_p]dp$.}
+\indent 沿一任意积分路线求积分，得\\
+\centerline{$H=H_0+\int {JC_pdT+[v-T(\dfrac{\partial v}{\partial T})_p]dp}$,}
+其中$H_0$为积分常数.由此可见，由根据在一个固定压强$p_0$下测
+定的$C_p$而算出的$C_p$和状态方程$v=v(p,T)$即可由积分而求得
+焓.然后应用焓的定义：$H=U+pv$,即可求得内能函数$U$.\\
+\indent 把这个结果与第二章第14节中用热力学第一定律定内能的
+公式（15）比较，就可看出有了热力学第二定律之后，只需要一个热
+容量$C_p$的数据就可确定内能，不需要$C_p$和$C_v$两个了.\\
+\indent \textbf{\heiti (b)  熵的函数}\\
+\indent 在选$p$、$T$为独立变数时，熵函数可直接由$C_p$和状态方程用
+积分求得.熵的全微分式是\\
+\centerline{$dS=\dfrac{\dbar Q_\text{可逆}}{T}=\dfrac{V_p}{T}dT+\dfrac{h}{T}dp$.}
+把式（47）$h=-\dfrac{T}{J}(\dfrac{\partial v}{\partial T})_p$代入，就有\\
+\centerline{$dS=C_p \dfrac{dT}{T}-\dfrac{1}{J}(\dfrac{\partial v}{\partial T})_p dp$.}
+求线积分，得\\
+\centerline{$S=S_0+\int{C_p \dfrac{dT}{T}-\dfrac{1}{J}(\dfrac{\partial v}{\partial T})_p dp}$,}
+其中$S_0$为以积分常数.\\
+\indent 有了这三个热力学函数以后，均匀流体的平衡性质就完全确
+定了.这是因为其它一切热力学函数都可由这三个基本函数导
+出，而且这三个基本函数相应于三个基本规律，意识热平衡规律，
+二是热力学第一定律，三是热力学第二定律.在只有两个独立变
+数如均匀流体的情形下，只要由实验测定状态方程$v=v(p,T)$和
+在某一固定压强下的定压热容量，就可用积分求出内能和熵.\\
+\end{document}
