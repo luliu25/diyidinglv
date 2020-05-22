@@ -43,14 +43,21 @@
 \centerline{$dS=\dfrac{C_v}{T}dT+\dfrac{l}{T}dv$.}
 \indent 这两个式子为全微分，而$p$、$C_v$、$l$都是（或可以是）$v$和$T$
 的函数.把它们为全微分的条件写出来，即得\\
-\centerline{$J( \dfrac{\partial C_v}{\partial v})_T=J(\dfrac{\partial l}{\partial T})_v-(\dfrac{\partial p}{\partial T})_v$,}
+\begin{equation}\tag{A}
+J( \dfrac{\partial C_v}{\partial v})_T=J(\dfrac{\partial l}{\partial T})_v-(\dfrac{\partial p}{\partial T})_v
+\end{equation}
+% 方程右边有序号的，就用这种 \begin{equation}.... 形式. 在 "equation"环境里面，方程两边不用加 $ .
 和\\
-\centerline{$( \dfrac{\partial C_v}{\partial v})_T=(\dfrac{\partial l}{\partial T})_v-\dfrac{l}{T}$.}
+\begin{equation}\tag{B}
+( \dfrac{\partial C_v}{\partial v})_T=(\dfrac{\partial l}{\partial T})_v-\dfrac{l}{T}.
+\end{equation}
 \indent 这两个关系就是代表热力学定律所强加于我们的限制.可从
 这两个方程得种种组合，以代替这两个方程本身.这样做的好
 处在于把$l$和$C_v$这两个热量系数分离开来.\\
 \indent （一）如以$J$乘式（B）,而从式（A）减去之，得\\
-\centerline{$l=\dfrac{T}{J}(\dfrac{\partial p}{\partial T})_v$.}
+\begin{equation}\tag{41}
+l=\dfrac{T}{J}(\dfrac{\partial p}{\partial T})_v.
+\end{equation}
 这是重要的结果之一.其内容与含义决非第二章的式（8）所可比
 拟；那式（8）只是表示热量系数之间的数学关系，没有包含很多物
 理内容在内.\\
@@ -60,11 +67,13 @@ $dT=0$,可说$l$是在温度不变下膨胀单位体积是的潜热.由此可
 温度$T$与压强对于温度的偏微商的乘积.再加引申，就得克拉珀
 龙方程，见后第（40）节（d）.\\
 \indent 以式（41）的$l$之值代入式（B）,又得\\
-\centerline{$( \dfrac{\partial C_v}{\partial v})_T=\dfrac{T}{J}(\dfrac{\partial^2 p}{\partial T^2})_v$,}
+\begin{equation}\tag{42}
+(\dfrac{\partial C_v}{\partial v})_T=\dfrac{T}{J}(\dfrac{\partial^2 p}{\partial T^2})_v,
+\end{equation}
 表出定体比热随体积的改变与状态方程$p=p(v,T)$之间的联系.
 不要小看这个关系，须知它的得来不易.它和式（41）都是应用了
 热力学第一和第二定律才能得到的.我们知道，比热不能从状态方程推出，须由实验测定.应用热力学定律的结果，虽不能使我
-们从状态方程求出$C_v$,却能使我们求出$( \dfrac{\partial C_v}{\partial v})_T$，反映了比热变
+们从状态方程求出$C_v$,却能使我们求出$\left( \dfrac{\partial C_v}{\partial v}\right)_T$，反映了比热变
 化和状态方程之间的内在联系.\\
 \indent （二） 又以第二章的式（8）\\
 \centerline{$l=\dfrac{C_p-C_v}{(\dfrac{\partial v}{\partial T})}_P$,}
@@ -81,7 +90,7 @@ $dT=0$,可说$l$是在温度不变下膨胀单位体积是的潜热.由此可
 \centerline{$(\dfrac{\partial p}{\partial T})_v=-(\dfrac{\partial p}{\partial v})_T (\dfrac{\partial v}{\partial T})_p$,  $(\dfrac{\partial p}{\partial v})_T(\dfrac{\partial v}{\partial p})_T=1$,}
 之后，式（43）可以写成\\
 \centerline{$C_p-C_v=-\dfrac{T (\dfrac{\partial v}{\partial T})_{p}^{2}}{J (\dfrac{\partial v}{\partial p})_T}$.}
-其中$ (\dfrac{\partial v}{\partial T})_p$和$ (\dfrac{\partial v}{\partial p})_T$若分别由体胀系数$\alpha$和压缩系数$\kappa$表出，
+其中$\left( \dfrac{\partial v}{\partial T} \right)_p$和$\left(\dfrac{\partial v}{\partial p}\right)_T$若分别由体胀系数$\alpha$和压缩系数$\kappa$表出，
 即：\\
 \centerline{$(\dfrac{\partial v}{\partial T})_p=\alpha v_0$,   $(\dfrac{\partial v}{\partial p})_T=-v_0 \kappa$,}
 并设$v_0$为单位质量的体积，则得\\
@@ -105,12 +114,16 @@ $dT=0$,可说$l$是在温度不变下膨胀单位体积是的潜热.由此可
 和\\
 \centerline{$(\dfrac{\partial S}{\partial T})_v=\dfrac{C_v}{T}$,  $(\dfrac{\partial S}{\partial v})_T=\dfrac{l}{T}$,}
 并在它们中间消去热量系数$C_v$和$l$,就得\\
-\centerline{$(\dfrac{\partial U}{\partial T})_v=JT(\dfrac{\partial S}{\partial T})_v$}
+\begin{equation}\tag{44}
+(\dfrac{\partial U}{\partial T})_v=JT(\dfrac{\partial S}{\partial T})_v
+\end{equation}
 和\\
-\centerline{$(\dfrac{\partial U}{\partial v})_T=JT(\dfrac{\partial S}{\partial v})_T-P$.}
+\begin{equation}\tag{45}
+(\dfrac{\partial U}{\partial v})_T=JT(\dfrac{\partial S}{\partial v})_T-P.
+\end{equation}
 这两个关系也是热力学定律所强加于我们的限制，反映了熵和内
 能之间的内在关系.\\
-\indent 式（44）所表示的$\dfrac{1}{J}(\dfrac{\partial U}{\partial T})_v$和$T(\dfrac{\partial S}{\partial T})_v$之间的等同关系式显
+\indent 式（44）所表示的$\dfrac{1}{J}(\dfrac{\partial U}{\partial T})_v$和$T(\dfrac{\partial S}{\partial T})_v$之间的等同关系是显
 而易见的.它们同等于$C_v$，英文当体积不变时，系统所作的功为
 零.则$dU=J \dbar Q$,而$\dbar Q$又等于$TdS$的缘故.\\
 \indent 在式（45）中的$(\dfrac{\partial S}{\partial v})_T$原来等于$\dfrac{l}{T}$,根据式（41）又有
