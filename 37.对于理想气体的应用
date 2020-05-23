@@ -1,0 +1,83 @@
+\section{对于理想气体的应用} 
+     关于理想气体的性质，己在前几章中讨论过，这些结果也可
+\documentclass{ctexbook}
+\usepackage{ctex,amsmath}
+\usepackage[papersize={13.56cm},lmargin=1.5cm,rmargin=1.5cm]{geometry}
+\newcommand{\dbar}{d\hspace*{0.1em}}
+
+\renewcommand\thesection{\arabic{section}.}
+\renewcommand\thesubsection{(\alph{subsection})}
+%
+\usepackage{titlesec}
+\titleformat{\section}{\large\centering}{\thesection}{8pt}{}
+\titleformat{\subsection}{\normalsize\heiti\bfseries}{\qquad\thesubsection}{6pt}{}
+%
+\titlespacing{\section}{0pt}{5pt}{0pt}
+\titlespacing{\subsection}{0pt}{0pt}{0pt}
+
+\catcode `\@=11
+\def\uwavealt{\bgroup \markoverwith{\lower5.5\p@\hbox{\sixly \char58}}\ULon}
+
+\newcommand\parallelogram{
+   \mathord{\text{
+      \tikz[baseline]
+         \draw (0em, .1ex) -- ++( .9em, 0ex) --
+            ++(.2em, 1.2ex) -- ++(-0.9em, 0ex) -- cycle;}}}
+% 用于平行四边形符号;
+\begin{document}
+\setcounter{section}{36}
+\setcounter{page}{119}
+\section{对于理想气体的应用} 
+     关于理想气体的性质，己在前几章中讨论过，这些结果也可
+应用在上两节中从热力学定律得出的公式来求，以便互相引证．\\
+\indent 设有一种气体，其内能单由温度而定．根据这一假设，我们
+可以推知有关这种气体的力的和热的其它性质吗？\\
+\indent 这个假设的意义，用算式表出，就是〔见第二章第I4节式
+(15)]\\ 
+\centerline{$l=\dfrac{p}{J}$} 
+由公式(41)又有\\
+\centerline{$l=\dfrac{T}{J}(\dfrac{\partial p}{\partial T})_v$;} 
+从这两式得\\
+\centerline{$p=T (\dfrac{\partial p}{\partial T})_v$.}
+\indent 此式可以写成\\ 
+\centerline{$\dfrac{\partial}{\partial T}(\dfrac{p}{T})=0$,}
+积分得\\ 
+\centerline{$\dfrac{p}{T}=\varphi(v)$.}
+\indent 由此可见，凡合乎焦耳定律的气体（其内能仅为温度的函数）,
+其状态方程必成为\\ 
+\centerline{$p=T\varphi(v)$}
+的形式.\\
+\indent 在另一方面，若$t$为该气体温度计所表示的温度，则依定义，
+当体积不变时，$p$为$t$的线性函数，可以写成\\ 
+\centerline{$p=R'(\dfrac{1}{\beta}+t)$.} 
+\indent 由此重得下面两个已知的结果：\\
+\indent （一）$t$为$T$的线性函数；\\
+\indent （二）一切合乎焦耳定律的气体都有相同的压强系数$\beta$．\\
+\indent 又从$p=T\beta $得\\
+\centerline{$(\dfrac{\partial^2 p}{\partial T^2})_T=0$,} 
+把它代入式（42)，即有\\ 
+\centerline{$(\dfrac{\partial C_v}{\partial v})_T=0$} 
+可见定体热容量$C_v$也即定体比热$C_v$，只是温度的函数.但这并不
+意味着它是常数；事实上，$C_v$随$T$而变．\\
+\indent 最后,若我们又知在温度不变时，气体遵守玻意耳-马略特定
+律，则其状态方程必成\\
+\centerline{$pv=\dfrac{m}{M}RT$}
+的形式\\
+\indent 于是从第35节式（43）我们得\\ 
+\centerline{$C_p-C_v=\dfrac{m}{M}\dfrac{R}{J}$,\text{即} $C_p-C_v=\dfrac{R}{MJ}$,}  
+这就是迈尔公式．可见两种比热之差$(C_p-C_v)$为一常数；$C_v$既仅为
+$T$的函数，则$C_p$也必只是$T$的函数．\\
+\indent 理想气体的热力学函数如内能和熵，已在第二章第15节（(b)
+和第三章第27节（d)例5中求出.它们之所以能够由积分求出，
+全靠$C_v$和$C_p$是常数这个假设．这个假设是不可避免的，否则在
+上节末尾所得的结论就不能成立．我们必须由实验测定$C_p$或$C_v$
+随温度而改变的规律，才能用积分求出内能和熵，不是如上节末尾
+所说的，只要由实验测定状态方程、和在某一固定压强下的定压比
+热、或在某一固定体积下的定体比热就够了.\\
+\indent 在第35节关于热力学关系中，根据热力学定律，我们得出了
+$(\dfrac{\partial C_v}{\partial v})_T$和$(\dfrac{\partial C_p}{\partial p})_T$的公式，但是没有也不可能求出$\dfrac{\partial C_v}{\partial T}$和$\dfrac{\partial C_p}{\partial T}$
+的公式．因此，一个补充的假设就成为不可避免的了；在这里．我们 
+假设$\dfrac{\partial C_v}{\partial T}=0$或$\dfrac{\partial C_p}{\partial T}=0$.所以在理想气体的定义中，除状态方
+程：$pv=\dfrac{m}{M}RT$外，还必须附加$C_v=\text{常数}$或$C_p=\text{常数}$这个条件.这
+就暴露了单凭热力学定律来研究物质性质的不足之处.\\
+\end{document}
