@@ -1,0 +1,69 @@
+\documentclass{ctexbook}
+\usepackage{ctex,amsmath}
+\usepackage[papersize={13.56cm},lmargin=1.5cm,rmargin=1.5cm]{geometry}
+\newcommand{\dbar}{d\hspace*{0.1em}}
+
+\renewcommand\thesection{\arabic{section}.}
+\renewcommand\thesubsection{(\alph{subsection})}
+%
+\usepackage{titlesec}
+\titleformat{\section}{\large\centering}{\thesection}{8pt}{}
+\titleformat{\subsection}{\normalsize\heiti\bfseries}{\qquad\thesubsection}{6pt}{}
+%
+\titlespacing{\section}{0pt}{5pt}{0pt}
+\titlespacing{\subsection}{0pt}{0pt}{0pt}
+
+\catcode `\@=11
+\def\uwavealt{\bgroup \markoverwith{\lower5.5\p@\hbox{\sixly \char58}}\ULon}
+
+\newcommand\parallelogram{
+   \mathord{\text{
+      \tikz[baseline]
+         \draw (0em, .1ex) -- ++( .9em, 0ex) --
+            ++(.2em, 1.2ex) -- ++(-0.9em, 0ex) -- cycle;}}}
+% 用于平行四边形符号;
+\begin{document}
+\setcounter{section}{37}
+\setcounter{page}{121}
+\section{流体在绝热压缩中的温度变化}
+   我们绝热地压缩一流体，即用可逆方法来增加流体的压强而
+不让其与外界交换热量，则流体的温度降如何变化呢？\\
+\indent 由于变化是绝热地，我们有\\
+\centerline{$\dbar Q=0$,}
+或\\
+\centerline{$C_pdT+hdp=0$.}
+由此可知，若压强增加$dp$,则流体温度的改变为\\
+\centerline{$dT=-\dfrac{h}{C_p}dp$.}
+既然$dp>0$,$dT$之为正或为负，要看$h$的符号而定，把式（47）的
+$h$之值代入，就得\\
+\centerline{$dT=\dfrac{T}{C_pJ}(\dfrac{\partial v}{\partial T})_p dp$,}
+式中$T$、$C_p$、$J$均为正数，可见$dT$的符号$(\dfrac{\partial v}{\partial T})_p$的符号而
+定.\\
+\indent 通常$(\dfrac{\partial v}{\partial T})_p>0$，这就是说，在压强不变时，增高流体的温度，
+则其体积随之而增大．大多数的液体和所有的气体都是如此．这
+个式子表明，绝热压缩一流体时，则其温度上升，要保持其温度于
+不变，必须设法取去压缩中所产生的热量．\\
+\indent 也有例外，若$(\dfrac{\partial v}{\partial T})_p<0$，则增加对流体的压强，反而使其温
+度下降．水在0℃和4℃之间，就呈这种反常情形．\\
+\indent 要用实验验证上面所得结果，对液体比较容易，因为液体的热
+容量既大，如实验时间不长，则在细心执行下，即使仍有些许热量
+逸散于外界，其影响子温度的误差必然极微的缘故．实验的方法，
+是把液体盛于装有活塞的圆筒中，圆筒内放一热电偶，与一电流计
+在筒外相连；当活塞下压，则见电流计的指针转动；观其转动的方
+向和大小，得知液体温度升高或降低多少．\\
+\indent 对于一个已给的$dp$,由式（57）可以求出相应的$dT$．若$dp$的
+值只是1大气压左右，由于$(\dfrac{\partial v}{\partial T})_p$的值很小，则温度的变化极
+微．但在液体中施用高大压强并非困难而危险的事情，我们可以
+达到容易测量的温度变化．\\
+\indent 下列关于水的结果：\\
+\centerline{$\text color{red}{表格不会写}$.}
+实测结果与计算所得符合，可见理论之正确．事实上，这是最早用
+实验证实热力学第二定律的方法之一．我们就这样用热力学理论
+说明了水在4℃下时受压而变冷的奇特现象，虽然它的内能是增
+加的．\\
+\indent 值得注意的是，流体温度改变的方向，常在\uwavealt{阻止}我们所要引起
+的体积变化．比如说．我们要压缩酒精使其体积减小，结果酒精温
+度上升，因热而酒精膨胀，以反抗我们的企图．又如压缩0℃的
+水，则水的温度下降，就此时的水而言，$(\dfrac{\partial v}{\partial T})_p<0$，减低温度才能
+使体积胀大，来反抗我们要减小水的体积的企图．\\ 
+\end{document}
