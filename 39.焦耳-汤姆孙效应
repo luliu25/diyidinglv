@@ -23,8 +23,8 @@
             ++(.2em, 1.2ex) -- ++(-0.9em, 0ex) -- cycle;}}}
 % 用于平行四边形符号;
 \begin{document}
-\setcounter{section}{37}
-\setcounter{page}{121}
+\setcounter{section}{38}
+\setcounter{page}{123}
 \section{焦耳一汤姆孙效应}
      在1845年，焦耳做实验来研究气体的内能（盖・吕萨克早在
 1807年做过同样的实验），得出气体的内能单是温度的函数而与
