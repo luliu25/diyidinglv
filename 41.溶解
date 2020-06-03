@@ -1,0 +1,85 @@
+\documentclass{ctexbook}
+\usepackage{ctex,amsmath}
+\usepackage[papersize={13.56cm},lmargin=1.5cm,rmargin=1.5cm]{geometry}
+\newcommand{\dbar}{d\hspace*{0.1em}}
+
+\renewcommand\thesection{\arabic{section}.}
+\renewcommand\thesubsection{(\alph{subsection})}
+%
+\usepackage{titlesec}
+\titleformat{\section}{\large\centering}{\thesection}{8pt}{}
+\titleformat{\subsection}{\normalsize\heiti\bfseries}{\qquad\thesubsection}{6pt}{}
+%
+\titlespacing{\section}{0pt}{5pt}{0pt}
+\titlespacing{\subsection}{0pt}{0pt}{0pt}
+
+\catcode `\@=11
+\def\uwavealt{\bgroup \markoverwith{\lower5.5\p@\hbox{\sixly \char58}}\ULon}
+
+\newcommand\parallelogram{
+   \mathord{\text{
+      \tikz[baseline]
+         \draw (0em, .1ex) -- ++( .9em, 0ex) --
+            ++(.2em, 1.2ex) -- ++(-0.9em, 0ex) -- cycle;}}}
+% 用于平行四边形符号;
+\begin{document}
+\setcounter{section}{40}
+\setcounter{page}{144}\section{熔解}
+    上节关于蒸气与其液体所成系统的讨论，也可应用于液体与
+其固体的系统中.不仅如此，凡在规定压强之下，物态变化的发生
+有一定温度的现象，都可应用上节的讨论方法．\\
+\indent 在规定的压强之下，一物质的液态和固态，只有在某一定的温
+度才能同时存在．这个一定温度就是该物质在该压强下的\textbf{\heiti 熔解温
+度}．反过来说，在温度规定了的时候（温度须在某范围内，有时这
+个范围是够狭的），则有一定的\textbf{\heiti 熔解压强}，即仅在这个熔解压强之
+下，液态和固态才能共存．\\
+\indent 上节计算方法可以适用于此．在这里：\\
+\indent $L$为熔解潜热；\\
+\indent $u$为固体的比体积；\\
+\indent $u'$为液体的比体积（从状态$u$变为状态$u'$时，需供给热
+量$L>0$).\\
+\indent 克拉珀龙方程无需丝毫改变，就可适用．\\
+\indent 先从低压强开始（例如1大气压）；$u$和$u'$为在熔点时固体和
+液体（都是很难压缩的）的比体积，均可由其相应密度求得．又$L$
+的值常为正，也为已知．于是从克拉珀龙方程，可以计算$\dfrac{dp}{dT}$的
+值，即$p-T$图上熔解曲线的角系数，由此可以推知熔解温度变化
+的方向及其大小，当压强增加某量的时候．\\
+\indent  通常$u'$大于$u$（在固体与液体的温合中，固体沉于下层），因
+ 而$\dfrac{dp}{dT}>0$．所以增加压强，则熔点升高．又若在固态与液态共存
+的平衡状态中，增加其压强而同时维持其温度不变，则液体将全凝
+成固体， 在寻常的压强变化之下，熔点升降固然很小;但在强大压缩
+中，熔点变化也极可观．下表为关于\text{\heiti 苯}$(C_6H_6)$的数据．\\
+\centerline{$\text{\heiti 压强}       \text{\heiti 溶解温度}$}
+\centerline{$1\text{\heiti 大气压}         5.4℃$}
+\centerline{$161                                   10.1°$} 
+\centerline{$533                                   20.1°$}  
+\centerline{$1371                                  40.0°$} 
+\centerline{$1805                                  50.0°$} 
+\centerline{$2846                                  70.0°$} 
+\indent 也有例外的液体，当具凝固时，反而增大体积$(u'<u)$．于是
+$\dfrac{dp}{dT}<0$,压强足以降低其熔点.在固体与液体共存的平衡中，若
+增加其压强而同时维持其温度不变，则其中更多的固体将要熔化．
+\indent 水就是这样的一种液体．在标准状态下，有\\
+\indent $T=273K$,\\
+\indent $L=80\text{卡}/\text{克}$,\\
+\indent 冰在0℃时的比体积$u=1.091(\text{厘米})^{3}/ \text{克}$,\\
+\indent 水在0℃时的比体积$u'=1.0013(\text{厘米})^{3}/ \text{克}$;\\
+应用克拉珀龙方程，就得\\
+\centerline{$\dfrac{dp}{dT}=\dfrac{80\times 4.185\times 10^{7}}{273(1.0013-1.091)}=-13.6\times 10^{7} \text{达因}/(\text{厘米})^{2}•\text{度}$.}
+若压强增加1大气压，即$dp=1\text{大气压}=1.013\times 10^{6}\text{达因}/ 
+(\text{厘米})^{2}$,则冰的熔点降低\\
+\centerline{$dT=-0.0074℃$;}
+反之，若除去大气压强以成真空状态，则水将在0.0074℃凝固了.
+\indent 这个改变是很小的.但是压强一高，水的熔点降低也就十分
+显著，观于下表而可知.\\
+\centerline{$\text{\heiti 压强}       \text{\heiti 溶解温度}$}
+\centerline{$1\text{\heiti 大气压}         0℃$}
+\centerline{$336                                  -2.5°$} 
+\centerline{$615                                   -5.0°$}  
+\centerline{$1155                                  -10.0°$} 
+\centerline{$1625                                  -15.0°$} 
+\centerline{$2042                                  -20.0°$} 
+\indent 对于升华现象，即固体直接变成气体而不经过液体状态的，上
+述这种种讨论也可适用.\\
+ 
+\end{document}
