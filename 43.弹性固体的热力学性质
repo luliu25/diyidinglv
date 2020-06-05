@@ -1,0 +1,79 @@
+\documentclass{ctexbook}
+\usepackage{ctex,amsmath}
+\usepackage[papersize={13.56cm},lmargin=1.5cm,rmargin=1.5cm]{geometry}
+\newcommand{\dbar}{d\hspace*{0.1em}}
+
+\renewcommand\thesection{\arabic{section}.}
+\renewcommand\thesubsection{(\alph{subsection})}
+%
+\usepackage{titlesec}
+\titleformat{\section}{\large\centering}{\thesection}{8pt}{}
+\titleformat{\subsection}{\normalsize\heiti\bfseries}{\qquad\thesubsection}{6pt}{}
+%
+\titlespacing{\section}{0pt}{5pt}{0pt}
+\titlespacing{\subsection}{0pt}{0pt}{0pt}
+
+\catcode `\@=11
+\def\uwavealt{\bgroup \markoverwith{\lower5.5\p@\hbox{\sixly \char58}}\ULon}
+
+\newcommand\parallelogram{
+   \mathord{\text{
+      \tikz[baseline]
+         \draw (0em, .1ex) -- ++( .9em, 0ex) --
+            ++(.2em, 1.2ex) -- ++(-0.9em, 0ex) -- cycle;}}}
+% 用于平行四边形符号;
+\begin{document}
+\setcounter{section}{42}
+\setcounter{page}{148}
+\section{弹性固体的热力学性质}
+    对于状态由两个独立变数规定的系统，都可仿照本章第35节
+关于均匀流体所用的方法来研究，看本节和下几
+节所举的例就可明白.\\
+\indent 如图21，有金属棒$OA$,其上端固定，在其下
+端用力拉它.棒的状态可由两个独立变数规定：
+一为拉力$F$,另一为温度$T$.棒的长度$x$则为$T$
+和$F$的函数（热胀与拉长）.当棒长$x$增长$dx$时，
+我们将消耗工作$Fdx$,该系统所作出的工作则
+为\\
+\centerline{$\dbar W_\text{可逆}=-Fdx$.}
+\indent 当该系统经历一可逆的无穷小变化时，我们
+所供给的热量可以写成\\
+\centerline{$\dbar Q_\text{可逆}=C_FdT+bdF$,}
+从而\\
+\centerline{$dU=J\dbar Q_\text{可逆}-\dbar W_\text{可逆}=JC_FdT+JbdF+Fdx$.}
+\indent 由于$x$是$F$和$T$的函数，我们有\\
+\centerline{$dx=(\dfrac{\partial x}{\partial T})_F dT+(\dfrac{\partial x}{\partial F})_T dF$;}
+把它代入上式，就得\\ 
+\centerline{$dU=[JC_F+F(\dfrac{\partial x}{\partial T})_F]dT+[Jb+F\dfrac{\partial x}{\partial F})_T]dF$.}
+\indent 把$dU$ 为全微分的条件写出，得\\
+\centerline{$J(\dfrac{\partial C_F}{\partial F})_T=J(\dfrac{\partial b}{\partial T})_F-(\dfrac{\partial x}{\partial T})_F$.}
+又把\\
+\centerline{$ds=\dfrac{\dbar Q_\text{可逆}}{T}=\dfrac{C_F}{T}dF+\dfrac{b}{T}dF$}
+为全微分的条件写出，得\\
+\centerline{$(\dfrac{\partial C_F}{\partial F})_T=(\dfrac{\partial b}{\partial T})_F-\dfrac{b}{T}$.}
+\indent 从（A）、（B）两式，就得\\
+\centerline{$b=\dfrac{T}{J}(\dfrac{\partial x}{\partial T})_F    \text{和}   (\dfrac{\partial C_F}{\partial F})_T=\dfrac{T}{J}(\dfrac{\partial^2 x}{\partial T^2})_F$,}
+完全与式（47）和式（48）类似，长度$x$类似于体积$v$，拉力$F$类似于
+压强$-p$.\\
+\indent 若用绝热方式来拉（即棒不能与其四周交换热量，或者拉得如
+此之快，以致来不及与其四周交换热量），则有$\dbar Q_\text{可逆}=0$,由此得\\
+\centerline{$dT=-\dfrac{b}{C_F}dF=-\dfrac{T}{JC_F}(\dfrac{\partial x}{\partial T})_F dF$.}
+\indent 大多数物体受热则伸长，即$\dfrac{\partial x}{\partial T}>0$.可见棒被拉时温度\uwave{降
+低}.也有例外，例如橡胶，其$\dfrac{\partial x}{\partial T}<0$,橡胶被拉时温度升高.这
+样说来，又得出本章第38节的法则，即温度改变的方向，在使它所
+产生的效果，用来阻止我们所要引起的变化（在这里是棒的拉长）.\\
+\indent 若欲求出$dT$的值，须知金属的性质和棒的长短粗细.设$s$
+为棒的截面积，$x_0$为它在0℃和$F=0$时的原来长度，则在$t℃$时
+的长度为\\
+\centerline{$x=x_0(1+\lambda t)$,}
+式中$\lambda $为线胀系数.由此得\\
+\centerline{$(\dfrac{\partial x}{\partial T})_F =(\dfrac{\partial x}{\partial t})_F=x_0 \lambda$.}   
+\indent 又命$c$为该金属的比热，$\delta$为它的密度，则有\\
+\centerline{$C_F=c\delta sx_0$.}
+于是得\\
+\centerline{$dT=-\dfrac{T}{J}\dfrac{\lambda}{c \delta}\dfrac{dF}{s}$.}
+式中$\dfrac{\lambda}{c \delta}$为关于该金属的常数，$\dfrac{dF}{s}$为棒的胁强的增加.可见
+棒的温度降低与其长短无关.\\
+\indent 拉长金属棒而产生的温度变化很小，在弹性实验中通常可以
+不加考虑.\\
+\end{document}
