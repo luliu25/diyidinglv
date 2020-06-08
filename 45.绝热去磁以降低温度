@@ -1,0 +1,77 @@
+\documentclass{ctexbook}
+\usepackage{ctex,amsmath}
+\usepackage[papersize={13.56cm},lmargin=1.5cm,rmargin=1.5cm]{geometry}
+\newcommand{\dbar}{d\hspace*{0.1em}}
+
+\renewcommand\thesection{\arabic{section}.}
+\renewcommand\thesubsection{(\alph{subsection})}
+%
+\usepackage{titlesec}
+\titleformat{\section}{\large\centering}{\thesection}{8pt}{}
+\titleformat{\subsection}{\normalsize\heiti\bfseries}{\qquad\thesubsection}{6pt}{}
+%
+\titlespacing{\section}{0pt}{5pt}{0pt}
+\titlespacing{\subsection}{0pt}{0pt}{0pt}
+
+\catcode `\@=11
+\def\uwavealt{\bgroup \markoverwith{\lower5.5\p@\hbox{\sixly \char58}}\ULon}
+
+\newcommand\parallelogram{
+   \mathord{\text{
+      \tikz[baseline]
+         \draw (0em, .1ex) -- ++( .9em, 0ex) --
+            ++(.2em, 1.2ex) -- ++(-0.9em, 0ex) -- cycle;}}}
+% 用于平行四边形符号;
+\begin{document}
+\setcounter{section}{45}
+\setcounter{page}{156}
+\section{绝热去磁以将低温度}
+    早在1907年，郎之万（P.Langevin）就注意到，在绝热中去
+磁，顺磁体行将冷却．这个现象，实际上，是不难理解的．把任何
+物体磁化，我们必须供给它一定数量的能量，其中一部分\uwave{可以}表现
+为热量的形式而发放出去．待物体的温度与外界达到平衡之后，
+我们又把它在绝热的条件一下去磁．在去磁过程中，物体需要吸回
+它原来发放出去的热量；但是处在绝热条件下的物体不可能从外
+界吸取热量，势必在自己内部调整，因而物体本身温度下降．\\
+\indent 我们应用热力学定律来讨论这个问题．设$M$为物体的磁
+矩．当物体的磁矩$M$在磁场\text{不知道}中增加$dM$时，磁场对物体所作
+的功为$\text{不知道}dM$．忽略物体体积的变化（特别在低温时，确是可以
+忽略）．则可不计物体对外界所作的机械上作$p dv$.于是物体所吸
+收的热量为\\
+\centerline{$\dbar Q_\text{可逆}=dU-\text{不知道}dM$,}
+与我们所熟知的方程\\
+\centerline{$\dbar Q_\text{可逆}=dU+ p dv$}
+类似，一\text{不知道}类似于$p$,$M$类似于$v$.\\
+\indent 在本章第35和第36节关于均匀流体的讨论中，应用热力学
+两个定律的结果，由于式（47）\\
+\centerline{$h=-\dfrac{T}{J}(\dfrac{\partial v}{\partial T})_p$,}
+我们已经得到\\
+\centerline{$dS=\dfrac{C_p}{T}dT-\dfrac{1}{J}(\dfrac{\partial v}{\partial T})_p  dp$.}
+\indent 根据类似关系，以$-\text{不知道}$代替$p$,$M$代替$v$,在这里我们可以以
+立刻写出\\
+\centerline{$dS=\dfrac{C_\text{不知道}}{T}dT-\dfrac{1}{J}(\dfrac{\partial M}{\partial T})_\text{不知道}  d\text{不知道}$.} 
+式中$C_\text{不知道}$为物体在磁场维持不变下的热容量.\\
+\indent 在绝热变化中，把上式$dS=0$,就得\\
+\centerline{$\dfrac{dT}{d \text{不知道}}=(\dfrac{\partial T}{\partial \text{不知道}})_s=-\text{T}{JC_\text{不知道}}(\dfrac{\partial M}{\partial T})_\text{不知道}$.}
+\indent 利用这个公式，加上居里（P.Curie,1859-1906）的定律，就可看
+出绝热去磁以降低温度的理论根据.适用于顺磁体的居里定律是\\
+\centerline{$M=k\dfrac{\text{不知道}}{T}$,}
+式中$k$为一个正的常数.把它代入式（73）就得\\
+\centerline{$(\dfrac{\partial T}{\partial \text{不知道}})_s=\dfrac{k \text{不知道}}{JTC_\text{不知道}}$.}
+\indent 由于热容量$C_\text{不知道}$和绝对温度总是正的，可见\\
+\centerline{$(\dfrac{\partial T}{\partial \text{不知道}})_s>0$.}
+由此得出结论：当磁场绝热地减小时，温度随之降低.这就是绝
+热去磁可以降低温度的理论根据.\\
+\indent 绝热去磁是现代得到最低温度的最有效的方法.温度越低，
+这个方法越有效.这可从式（74）中$(\dfrac{\partial T}{\partial \text{不知道}})_s$与$T$成反比而知道.
+不仅如此，根据德拜（P.Debye）理论，$C_\text{不知道}$最后接近于固体的寻常
+热容量$C_p$,在低温区域又与$T^8$成比例.可见这个方法在绝对零
+度附近特别有效.\\
+\indent 事实上，在1933年这个方法的发明者齐奥格（Giauque）把硫
+酸轧从8000奥斯特和1.5K 开始绝热去磁，达到了0.25K的低
+温.1935年德和斯（de Haas）和维尔马（Wiersma）用钾铬矾从
+24000奥斯特和1.29K开始，达到了0.0044K 的低温.人们不
+禁要问，在这样低的温度区域用什么方法来测定温度呢？在1K 以
+下，常用居里定律来测定温度，直接测量的是顺磁质的磁矩.\\
+
+\end{document}
