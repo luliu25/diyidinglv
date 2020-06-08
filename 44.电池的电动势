@@ -1,0 +1,114 @@
+\documentclass{ctexbook}
+\usepackage{ctex,amsmath}
+\usepackage[papersize={13.56cm},lmargin=1.5cm,rmargin=1.5cm]{geometry}
+\newcommand{\dbar}{d\hspace*{0.1em}}
+
+\renewcommand\thesection{\arabic{section}.}
+\renewcommand\thesubsection{(\alph{subsection})}
+%
+\usepackage{titlesec}
+\titleformat{\section}{\large\centering}{\thesection}{8pt}{}
+\titleformat{\subsection}{\normalsize\heiti\bfseries}{\qquad\thesubsection}{6pt}{}
+%
+\titlespacing{\section}{0pt}{5pt}{0pt}
+\titlespacing{\subsection}{0pt}{0pt}{0pt}
+
+\catcode `\@=11
+\def\uwavealt{\bgroup \markoverwith{\lower5.5\p@\hbox{\sixly \char58}}\ULon}
+
+\newcommand\parallelogram{
+   \mathord{\text{
+      \tikz[baseline]
+         \draw (0em, .1ex) -- ++( .9em, 0ex) --
+            ++(.2em, 1.2ex) -- ++(-0.9em, 0ex) -- cycle;}}}
+% 用于平行四边形符号;
+\begin{document}
+\setcounter{section}{44}
+\setcounter{page}{151}
+\section{电池的电动势} 
+     当电池工作对，电池内进行着化学反应，有一定数量的电荷在
+电池内由阴极流到阳极，而在电池外面的电路中则由正端流向负
+端．由于电路中有电流流通，就不可避免地发放热量，且与电流强
+度的平方成比例．这就是焦耳效应．焦耳效应显然是一个不可逆 
+现象．为了尽量减除焦耳效
+应，并使电池内化学反应达到
+平衡，从而得到最大的电动势，
+我们外加一个反电动势$-E$
+(在图22中为一电动机，也可
+以是一个电解器），恰好几乎抵
+消电池的电动势$E$．这时通过
+的电荷$dq$为无穷小量，过程是 
+可逆的，外界对电池所作的功为$-Edq$，也即电池对外界所作的功
+为$-Edq$．在这里$dq$类似于体积变化$dv$，$E$类似于压强$p$.\\
+\indent  {\fangsong(1)  以$T$和$q$为独立变数}\\
+\indent 假设电荷通过电池的过程是在\uwave{压强和体积不变}的情形下进行
+的，我们可取$T$和$q$为独立变数.\\
+\indent 当电池通过电荷$dq$和它的温度增加$dT$时，外界供给的热
+量为\\
+\centerline{$\dbar Q_\text{可逆}=CdT+b dp$,}
+而电池的内能变化为\\
+\centerline{$dU=J\dbar Q_\text{可逆}-\dbar W_\text{可逆}=CdT+(b-E)dp$.}
+\indent 应用热力学第一和第二定律，就可得出与第35节（41）和（42）
+两式类似的两个关系：\\
+\centerline{$b=\dfrac{T}{J}(\dfrac{\partial E}{\partial T})_q  \text{和}   (\dfrac{\partial C}{\partial q})_T=\dfrac{T}{J}(\dfrac{\partial^2 E}{\partial T^2})_q$.} 
+\indent 根据噶珀（Kapp）定律，参与化学反应的物质的总热容量等于
+反应后生成物的总热容量，即$\Delta C=0$,我们有\\
+\centerline{$(\dfrac{\partial C}{\partial q})_T=0$,}
+从而\\
+\centerline{$(\dfrac{\partial^2 E}{\partial T^2})_q=0$.}
+可见$E$为$T$的线性函数，即\\
+\centerline{$E=AT+E_0$,}
+式中常数$A$可以是正也可以是负.例如惠思顿标准电池的电动
+势为\\
+\centerline{$E=1.434-0.0012(t-15°).$}
+\indent 又由    $b=\dfrac{T}{J}(\dfrac{\partial E}{\partial T})_q$,得\\
+\centerline{$b=\dfrac{A}{J}T$.}
+\indent 若电池在\uwave{绝热}中运行，则由$\dbar Q_\text{可逆}=C dT+bdq=0$得\\
+\centerline{$dT=-\dfrac{AT}{JC}dq$.}
+由于$C$恒为正，可见电池在绝热运行中将要冷却或要升温，全看常
+数$A$之为正或负而定.若$A$为正，则$dT<0$,同时$b$也为正；由
+$b=\dfrac{T}{J}(\dfrac{\partial E}{\partial T})_q$可知$dE<0$,若$A$为负，则$dT>0$,同时$b$也
+为负；由$b=\dfrac{T}{J}(\dfrac{\partial E}{\partial T})_q$可知$dE<0$.所以无论电池冷却或升温，
+它的电动势总要减小.\\
+\indent 从上面$dU$这个式子，可以得出\uwave{化学能}的变化\\
+\centerline{$(\dfrac{\partial U}{\partial q})_T=b-E=\dfrac{T}{J}(\dfrac{\partial E}{\partial T})_q-E$,}
+即电池中化学反应的反应热.可见$dU$并不\uwave{完全}变成{可用}的电能
+$Edp$,电池在通过电荷的同时还要吸收或发放热量.\\
+\indent {\fangsong（2）   以$p$和$q$为独立变数}\\
+\indent 在电池的化学反应中牵涉到气体时，在\uwave{温度不变}的情形下，我
+们可取压强$p$和电荷$q$作为规定金属极板和点解质所成系统的状
+态的独立变数.\\
+\indent 当这个系统（即电池）的体积改变$dv$并通过电荷$dp$时，它对
+外界作功$p dv$,同时供给电能$E dp$.由于电能全部可以变成机械
+工作，可见在这个过程中电池的自由能（即可用能）的减少为\\
+\centerline{$dF=-pdv-Edp$.}
+\indent  引用自由焓这个态函数来代替自由能，就有由$dp$和$dq$组成
+的$dG$的全微分式\\
+\centerline{$dG=dF+d(pv)=v dp-E dq$,}
+从而得\\
+\centerline{$(\dfrac{\partial E}{\partial p})_q=-(\dfrac{\partial v}{\partial q})_p$.}
+随着运行而来的体积变化，即$(\dfrac{\partial v}{\partial q})_p$,只有在运行中电池放出或
+吸收气体时才显著.\\
+\indent 当1法拉第$\text{不知道}=96491.4$库仑的电荷通过点解质时，由点解
+可得1克当量（即1可分子被原子价除）的物质，假设同时消失$N$
+克分子气体.在这个过程中，系统的体积减少就是$pv=NRT$式中的$v$.于是我们有\\
+\centerline{$(\dfrac{\partial v}{\partial q})_p=-\dfrac{NRT}{\text{不知道}P}$,}
+从而得（假设$E$与$q$无关），\\
+\centerline{$\dfrac{dE}{dp}=\dfrac{NRT}{\text{不知道}P}$.}
+\indent 由此可见，电动势随压强的增加而增加.把上式积分，就得\\
+\centerline{$E_2-E_1=\dfrac{NRT}{\text{不知道}}In \dfrac{p_2}{p_1}$.}
+\indent 例如于含少许硫酸的水中，插入两个极化电极而成的电解器，
+可以作为一个可逆电池看待.在这里，$E$代表极化反电动势.在其
+中流出$\text{不知道}=96491.4$库仑的电荷对应与$\dfrac{1}{2}H_2+\dfrac{1}{4}O_2=\dfrac{1}{2}H_2O$
+的重新化合，系统将有$N=\dfrac{1}{2}+\dfrac{1}{4}=\dfrac{3}{4}$克分子气体体积的减少.
+把这些数据集代入上式，则在$N.K.S$.实用单位制中，在室温17℃
+时，我们有\\
+\centerline{$E_2-E_1=\dfrac{3}{4}\times \dfrac{8.32\times 290}{96491.4}In\dfrac{p_2}{p_1}=0.0188In\dfrac{p_2}{p_1}\text{伏特}$.}
+\indent 实验测得：当$p_1=0.735\text{毫米汞高时}$，$E_1=1.64\text{伏特}$；
+当$p_2=742\text{毫米汞高时}$，$E_2=1.783\text{伏特}$；
+从而\\
+\centerline{$E_2-E_1=0.143\text{伏特}$.}
+这与$p_1$和$p_2$的值代入上式计算所得的值0.131伏特，可说已
+够满意地符合，因为，在一方面，极化反电动势的测定不容易准确，
+而在另一方面，我们所假设的可逆性又不过近似而已.\\
+\end{document}
