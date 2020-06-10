@@ -1,0 +1,71 @@
+\documentclass{ctexbook}
+\usepackage{ctex,amsmath}
+\usepackage[papersize={13.56cm},lmargin=1.5cm,rmargin=1.5cm]{geometry}
+\newcommand{\dbar}{d\hspace*{0.1em}}
+
+\renewcommand\thesection{\arabic{section}.}
+\renewcommand\thesubsection{(\alph{subsection})}
+%
+\usepackage{titlesec}
+\titleformat{\section}{\large\centering}{\thesection}{8pt}{}
+\titleformat{\subsection}{\normalsize\heiti\bfseries}{\qquad\thesubsection}{6pt}{}
+%
+\titlespacing{\section}{0pt}{5pt}{0pt}
+\titlespacing{\subsection}{0pt}{0pt}{0pt}
+
+\catcode `\@=11
+\def\uwavealt{\bgroup \markoverwith{\lower5.5\p@\hbox{\sixly \char58}}\ULon}
+
+\newcommand\parallelogram{
+   \mathord{\text{
+      \tikz[baseline]
+         \draw (0em, .1ex) -- ++( .9em, 0ex) --
+            ++(.2em, 1.2ex) -- ++(-0.9em, 0ex) -- cycle;}}}
+% 用于平行四边形符号;
+\begin{document}
+\setcounter{section}{45}
+\setcounter{page}{156}
+\section{压电正效应和反效应}
+    居里兄弟在1880年发现若干无心晶体被压或被拉，即于其体
+上出现符号相反、数量相等的电荷.这个
+现象称为压电正效应.\\
+\indent 试于水晶体中，割取一片，其厚沿晶体
+电轴的方向为$x$（图23）.用力$F$沿电轴
+方向压它，则在正交于电轴的两面上出现
+正负电荷，其值在$C.G.S.$绝对静电单位制
+中为\\
+\centerline{$q=6.32\times 10^{-8}F$.}
+\indent 次年李普曼（G.Lippmann）依照热力
+学方法，应用能量守恒与电量守恒这两个
+定律，予先推知压电反效应的存在，即压电晶体置于电场中就会伸
+长或缩短.\\
+\indent 取晶片所受拉力$F$和晶片两面的电位差$V$为规定晶片状态的
+两个独立变数.当$V$改变$dV$,$F$改变$dF$时，晶片面上电荷的改
+变将为\\
+\centerline{$dp=C dV +h dF$,}
+式中$C$为电容量，对于压电晶体，$h$不为零，就水晶言，\\
+\centerline{$h=6.32\times 10^{-8}$.}
+\indent 同时，晶片的厚度改变将为\\
+\centerline{$dx=a dV+b dF$,}
+式中$b$为弹性系数；而且必有\\
+\centerline{$\dfrac{\partial^2 x}{\partial V \partial F}=(\dfrac{\partial a}{\partial F})_v=(\dfrac{\partial b}{\partial V})_F$,}
+因为晶片厚度$x$是$V$和$F$的态函数.\\
+\indent 在这个$dx$和$dp$的变化中，外界对于晶片所做的机械工作为
+$Fdx$，所供给的电能为$Vdx$,于是晶片的内能增加为\\
+\centerline{$dU=F dx+V dq=(aF+CV)dV+(bF+hV)dF$.}
+\indent 根据能量守恒定律，即$dU$为全微分，我们有\\
+\centerline{$\dfrac{\partial (aF+CV)}{\partial F}=\dfrac{\partial (bF+hV)}{\partial V}$,}
+或\\
+\centerline{$a+V(\dfrac{\partial C}{\partial F})_V=h+V(\dfrac{\partial h}{\partial V})_F$,}
+其中利用了式（C）:$(\dfrac{\partial a}{\partial F})_V=(\dfrac{\partial b}{\partial V})_F$这一关系.\\
+\indent 又根据电量守恒定律，即式（A）的$dp$为全微分，我们有\\
+\centerline{$(\dfrac{\partial C}{\partial F})_V=(\dfrac{\partial h}{\partial V})_F$;}
+把它代入式（D）,就得\\
+\centerline{$a=h$,}
+即\\
+\centerline{$(\dfrac{\partial x}{\partial V})_F=(\dfrac{\partial q}{\partial F})_V$.}
+\indent 可见与压电正效应出现的同时，必然存在着压电反效应.这
+就是李普曼预见的不仅是定性的而且是定量的结果.居里兄弟当
+年就是用实验证实了压电反效应的存在，后来又有人①用光的干涉
+方法测定$a=(\dfrac{\partial x}{\partial V})_F=6.4\times 10^{-8}$,完全与理论结果符合.\\
+\end{document}
